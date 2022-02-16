@@ -15,14 +15,14 @@ import Header from './components/Header.js';
 function App() {
  return (
   <BrowserRouter>
+   <Routes>
+    <Route path="/" element={<Desktop />} />
+   </Routes>
    <Stars />
    <Moon />
    <Clouds />
    {/* <Waves /> */}
    <Header />
-   <Routes>
-    <Route path="/" element={<Desktop />} />
-   </Routes>
   </BrowserRouter>
  );
 }

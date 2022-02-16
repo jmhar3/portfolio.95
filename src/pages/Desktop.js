@@ -3,10 +3,10 @@ import Welcome from '../components/Welcome';
 
 const Desktop = () => {
  return (
-  <>
+  <div id="desktop">
    <Links />
    <Welcome />
-  </>
+  </div>
  )
 }
 

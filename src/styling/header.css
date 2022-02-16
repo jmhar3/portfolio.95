@@ -14,37 +14,13 @@ navbar {
  gap: 6px
 }
 
-nav .border {
- border-left: 2px solid #fff;
- border-top: 2px solid #fff;
- border-right: 2px solid #55036b;
- border-bottom: 2px solid #55036b;
-}
-
-nav .rev-border {
- border-left: 2px solid #55036b;
- border-top: 2px solid #55036b;
- border-right: 2px solid #fff;
- border-bottom: 2px solid #fff;
-}
-
 nav button {
  margin: 6px;
  border-radius: 0px;
- background-color: rgb(246, 236, 255);
- outline: none;
- box-shadow: -2px -2px #cb98d8 inset;
- padding: 6px;
  display: flex;
  justify-content: center;
  align-items: center;
  gap: 9px;
- transition: all .5s;
-}
-
-nav button:hover {
- box-shadow: none;
- transition: all .5s;
 }
 
 nav span img {

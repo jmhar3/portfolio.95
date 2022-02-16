@@ -28,3 +28,44 @@ button, a {
  align-content: center;
  align-items: center;
 }
+
+.border {
+ border-left: 2px solid #fff;
+ border-top: 2px solid #fff;
+ border-right: 2px solid #55036b;
+ border-bottom: 2px solid #55036b;
+ box-shadow: -2px -2px #cb98d8 inset;
+}
+
+.rev-border {
+ border-left: 2px solid #55036b;
+ border-top: 2px solid #55036b;
+ border-right: 2px solid #fff;
+ border-bottom: 2px solid #fff;
+}
+
+button {
+ border-left: 2px solid #fff;
+ border-top: 2px solid #fff;
+ border-right: 2px solid #55036b;
+ border-bottom: 2px solid #55036b;
+ box-shadow: -2px -2px #cb98d8 inset;
+ background-color: rgb(246, 236, 255);
+ outline: none;
+ box-shadow: -2px -2px #cb98d8 inset;
+ padding: 6px;
+ transition: box-shadow .5s;
+}
+
+button:hover {
+ box-shadow: none;
+ transition: box-shadow .5s;
+}
+
+button:focus {
+ border-left: 2px solid #55036b;
+ border-top: 2px solid #55036b;
+ border-right: 2px solid #fff;
+ border-bottom: 2px solid #fff;
+ box-shadow: none;
+}
