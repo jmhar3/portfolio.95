@@ -11,6 +11,7 @@
 h1, h2, h3, h4, h5, p, li, div, button, span {
  font-family: 'MS_Sans_Serif_8pt', sans-serif;
  color: #55036b;
+ text-align: center;
 }
 
 nav button {

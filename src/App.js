@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import './styling/general.css';
+import './styling/desktop.css';
 import Clouds from './components/Clouds.js';
 import Stars from './components/Stars.js';
 import Moon from './components/Moon.js';
