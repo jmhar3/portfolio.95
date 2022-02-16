@@ -1,0 +1,16 @@
+nav {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ background-color: rgb(246, 236, 255);
+}
+
+nav button {
+ margin: 6px;
+ border-radius: 0px;
+ border: none;
+ background-color: rgb(246, 236, 255);
+ /* box-shadow:  inset; */
+ box-shadow: -2px -2px #a654bd inset, 2px 2px #ffffff inset;
+ padding: 6px;
+}

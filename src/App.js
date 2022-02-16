@@ -8,8 +8,9 @@ import './App.css';
 import './styling/general.css';
 import Clouds from './components/Clouds.js';
 import Stars from './components/Stars.js';
-import Moon from './components/Moon.js'
+import Moon from './components/Moon.js';
 import Waves from './components/Waves.js';
+import Header from './components/Header.js';
 
 function App() {
  return (
@@ -18,6 +19,7 @@ function App() {
    <Moon />
    <Clouds />
    {/* <Waves /> */}
+   <Header />
    <Routes>
     <Route path="/" element={<Desktop />} />
    </Routes>

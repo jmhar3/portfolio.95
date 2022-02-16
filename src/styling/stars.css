@@ -36,12 +36,48 @@
  }
 }
 
+@-webkit-keyframes revAnimateStar {
+ 0% {
+  opacity: 1;
+ }
+ 50% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+
+@-moz-keyframes revAnimateStar {
+ 0% {
+  opacity: 1;
+ }
+ 50% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+
+@keyframes revAnimateStar {
+ 0% {
+  opacity: 1;
+ }
+ 50% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+
 /* ANIMATIONS */
 
 .s1 {
-	-webkit-animation: animateStar 10s linear infinite;
-	-moz-animation: animateStar 10s linear infinite;
-	animation: animateStar 10s linear infinite;
+	-webkit-animation: revAnimateStar 10s linear infinite;
+	-moz-animation: revAnimateStar 10s linear infinite;
+	animation: revAnimateStar 10s linear infinite;
 	
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
@@ -49,9 +85,9 @@
 }
 
 .s2 {
-	-webkit-animation: animateStar 15s linear infinite;
-	-moz-animation: animateStar 15s linear infinite;
-	animation: animateStar 15s linear infinite;
+	-webkit-animation: revAnimateStar 15s linear infinite;
+	-moz-animation: revAnimateStar 15s linear infinite;
+	animation: revAnimateStar 15s linear infinite;
 	
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
@@ -59,9 +95,9 @@
 }
 
 .s3 {
-	-webkit-animation: animateStar 6s linear infinite;
-	-moz-animation: animateStar 6s linear infinite;
-	animation: animateStar 6s linear infinite;
+	-webkit-animation: revAnimateStar 6s linear infinite;
+	-moz-animation: revAnimateStar 6s linear infinite;
+	animation: revAnimateStar 6s linear infinite;
 	
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
@@ -69,9 +105,9 @@
 }
 
 .s4 {
-	-webkit-animation: animateStar 12s linear infinite;
-	-moz-animation: animateStar 12s linear infinite;
-	animation: animateStar 12s linear infinite;
+	-webkit-animation: revAnimateStar 12s linear infinite;
+	-moz-animation: revAnimateStar 12s linear infinite;
+	animation: revAnimateStar 12s linear infinite;
 	
 	-webkit-transform: scale(0.78);
 	-moz-transform: scale(0.78);
@@ -131,7 +167,7 @@
 /* OBJECTS */
 
 .star {
-	background: rgb(255, 211, 13);
+	background: rgb(255, 232, 130);
 	height: 18px;
 	width: 18px;
 	position: absolute;
