@@ -1,4 +1,4 @@
-import '../styling/clouds.css';
+import '../../styling/clouds.css';
 
 const Clouds = () => {
  return (

@@ -1,4 +1,4 @@
-import '../styling/moon.css';
+import '../../styling/moon.css';
 
 const Moon = () => {
  return (

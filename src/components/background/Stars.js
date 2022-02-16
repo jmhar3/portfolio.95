@@ -1,4 +1,4 @@
-import '../styling/stars.css';
+import '../../styling/stars.css';
 import { useEffect } from 'react';
 
 const Stars = () => {

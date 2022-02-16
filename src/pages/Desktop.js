@@ -1,5 +1,5 @@
 import Links from '../components/Links';
-import Welcome from '../components/Welcome';
+import Welcome from '../components/windows/Welcome';
 import Header from '../components/Header.js';
 import { useState } from 'react';
 

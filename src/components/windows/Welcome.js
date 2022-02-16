@@ -1,4 +1,4 @@
-import computer from '../images/computer.png';
+import computer from '../../images/computer.png';
 import Draggable from 'react-draggable';
 
 const Welcome = ({ windows, setWindows }) => {
