@@ -1,6 +1,30 @@
 body {
+ cursor: url('../images/cursor.png'), auto;
 	background: #fcfbff;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+button, a {
+ cursor: url('../images/hover cursor.png'), auto;
+ text-decoration: none;
+}
+
+.row {
+ display: flex;
+ flex-direction: row;
+}
+
+.column {
+ display: flex;
+ flex-direction: column;
+}
+
+.center {
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ align-items: center;
 }

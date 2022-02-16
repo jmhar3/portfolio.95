@@ -1,1 +1,19 @@
+@font-face {
+ font-family: 'MS_Sans_Serif_8pt';
+ src: url(./fonts/ms_sans_serif_8pt-webfont.woff);
+}
 
+@font-face {
+ font-family: 'MS_Sans_Serif_8pt_bold';
+ src: url(./fonts/ms_sans_serif_8pt_bold-webfont.woff);
+}
+
+h1, h2, h3, h4, h5, p, li, div, button, span {
+ font-family: 'MS_Sans_Serif_8pt', sans-serif;
+ color: #55036b;
+}
+
+nav button {
+ font-family: 'MS_Sans_Serif_8pt_bold', sans-serif;
+ font-size: 15px;
+}

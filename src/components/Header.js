@@ -1,26 +1,65 @@
-import '../styling/nav.css';
-// import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
+import '../styling/header.css';
+import logo from '../images/heart.png';
+import email from '../images/email.png';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
+ const [date, setDate] = useState(new Date());
+
+ function refreshClock() {
+  setDate(new Date());
+ }
+
+ useEffect(() => {
+  const timerId = setInterval(refreshClock, 1000);
+  return function cleanup() {
+   clearInterval(timerId);
+  };
+ }, []);
+
+ const calculateHour = (hour) => {
+  if (hour === 0) {
+   return hour + 12
+  } else if (hour < 12) {
+   return hour
+  } else if (hour > 11) {
+   return hour - 12
+  }
+ }
+
+ const calculateMinute = (minute) => {
+  if (minute < 10) {
+   return `0${minute}`
+  } else {
+   return minute
+  }
+ }
+
+ const hour = calculateHour(date.getHours());
+ const minute = calculateMinute(date.getMinutes());
+
  return (
-  <nav>
-   <button>Start</button>
+  <nav className="row">
+   <navbar>
+    <span className="row">
+     <button className="border">
+      <img src={logo} alt="JH" />
+      Start
+     </button>
+     <hr />
+    </span>
+    <hr className="border" />
+    <a
+     href="mailto:jmhar@protonmail.com" className="center"
+    >
+     <img src={email} alt="E-Mail" />
+    </a>
+    <hr className="border" />
+   </navbar>
+   <span className="rev-border clock center">
+    {`${hour}:${minute}PM`}
+   </span>
   </nav>
-  // <Navbar>
-  //  <Container>
-  //   <Navbar.Collapse id="basic-navbar-nav">
-  //    <Nav className="me-auto">
-  //     <NavDropdown title="Start" id="basic-nav-dropdown">
-  //      <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-  //      <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-  //      <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-  //      <NavDropdown.Divider />
-  //      <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-  //     </NavDropdown>
-  //    </Nav>
-  //   </Navbar.Collapse>
-  //  </Container>
-  // </Navbar>
  )
 }
 

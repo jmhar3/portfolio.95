@@ -1,6 +1,12 @@
+import Links from '../components/Links';
+import Welcome from '../components/Welcome';
+
 const Desktop = () => {
  return (
-  <h1></h1>
+  <>
+   <Links />
+   <Welcome />
+  </>
  )
 }
 

@@ -1,0 +1,42 @@
+#links {
+ position: fixed;
+ display: flex;
+ flex-direction: column;
+ top: 18px;
+ left: 18px;
+}
+
+.container {
+ overflow: auto;
+ text-align: center;
+ padding: 3px;
+ margin-bottom: 3vh;
+}
+
+.container {
+ border: 2px dotted transparent;   
+}
+
+.container:hover {
+ border: 2px dotted #55036b;   
+}
+
+#links img {
+ width: 6.9vh;
+ height: 6.9vh;
+ border: none;
+ padding: 0;
+}
+
+#links img:hover {
+ width: 6.9vh;
+ height: 6.9vh;
+ border: none;
+}
+
+#links p {
+ margin: 0;
+ font-size: 3vh;
+ padding-top: .3em;
+text-align: center;
+}
