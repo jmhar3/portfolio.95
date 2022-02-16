@@ -1,15 +1,34 @@
 import computer from '../images/computer.png';
 import Draggable from 'react-draggable';
 
-const Welcome = () => {
+const Welcome = ({ windows, setWindows }) => {
  return (
-  <Draggable
-  handle=".welcome"
-  >
-   <div className="window border">
+  <Draggable handle=".welcome">
+   <div className={`window border ${windows.welcome.minimise && "hidden"}`}>
     <span className="window-header row welcome">
      <h4>JESSICA HARRIMAN</h4>
-     <button class="close-btn center">&times;</button>
+     <span className="row window-buttons">
+      <button
+       className="close-btn center"
+       onClick={() => setWindows({
+        ...windows,
+        welcome: {
+         minimise: true,
+         close: false
+        }
+       })}
+      >-</button>
+      <button
+       className="close-btn center"
+       onClick={() => setWindows({
+        ...windows,
+        welcome: {
+         minimise: false,
+         close: true
+        }
+       })}
+      >&times;</button>
+     </span>
     </span>
     <span className="window-body">
      <span className="row center">

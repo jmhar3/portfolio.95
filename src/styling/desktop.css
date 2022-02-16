@@ -29,6 +29,10 @@
  font-weight: bold;
 }
 
+.window-buttons {
+ gap: 6px;
+}
+
 .window-body .row {
  margin: 9px;
 }

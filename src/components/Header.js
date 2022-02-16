@@ -3,7 +3,7 @@ import logo from '../images/heart.png';
 import email from '../images/email.png';
 import { useState, useEffect } from 'react';
 
-const Header = () => {
+const Header = ({ windows, setWindows }) => {
  const [date, setDate] = useState(new Date());
 
  function refreshClock() {
@@ -55,7 +55,21 @@ const Header = () => {
      <img src={email} alt="E-Mail" />
     </a>
     <hr className="border" />
+    {!windows.welcome.close &&
+    <button
+     className="border"
+     onClick={() => setWindows({
+      ...windows,
+      welcome: {
+       minimise: !windows.welcome.minimise,
+       close: false
+      }
+     })}
+    >
+     Welcome
+    </button>}
    </navbar>
+
    <span className="rev-border clock center">
     {`${hour}:${minute}PM`}
    </span>
