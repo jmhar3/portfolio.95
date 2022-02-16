@@ -1,5 +1,6 @@
 import Links from '../components/Links';
 import Welcome from '../components/windows/Welcome';
+import Profile from '../components/windows/Profile';
 import Header from '../components/Header.js';
 import { useState } from 'react';
 
@@ -8,6 +9,10 @@ const Desktop = () => {
   welcome: {
    minimise: false,
    close: false
+  },
+  profile: {
+   minimise: false,
+   close: true
   }
  })
 
@@ -16,6 +21,11 @@ const Desktop = () => {
    <Links />
    {!windows.welcome.close &&
     <Welcome
+     windows={windows}
+     setWindows={setWindows}
+    />}
+   {!windows.profile.close &&
+    <Profile
      windows={windows}
      setWindows={setWindows}
     />}

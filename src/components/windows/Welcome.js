@@ -4,7 +4,10 @@ import Draggable from 'react-draggable';
 const Welcome = ({ windows, setWindows }) => {
  return (
   <Draggable handle=".welcome">
-   <div className={`window border ${windows.welcome.minimise && "hidden"}`}>
+   <div
+    className={`window border ${windows.welcome.minimise && "hidden"}`}
+    id="welcome"
+   >
     <span className="window-header row welcome">
      <h4>JESSICA HARRIMAN</h4>
      <span className="row window-buttons">
@@ -38,10 +41,22 @@ const Welcome = ({ windows, setWindows }) => {
        <p>Welcome to my portfolio.</p>
       </span>
      </span>
-     <button>Enter</button>
-    </span>
-   </div>
-  </Draggable>
+     <button
+      onClick={() => setWindows({
+       ...windows,
+       welcome: {
+        minimise: false,
+        close: true
+       },
+       profile: {
+        minimise: false,
+        close: false
+       }})}>
+        Enter
+     </button>
+   </span>
+  </div>
+  </Draggable >
  )
 }
 

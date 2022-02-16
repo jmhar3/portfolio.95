@@ -108,7 +108,7 @@ const Header = ({ windows, setWindows }) => {
      <li>Skills</li>
      <li>Education</li>
     </ul>
-    
+
     <ul
      className={`${!programmingMenu && "remove"} border clickable`}
      onMouseLeave={() => setProgrammingMenu(false)}
@@ -155,6 +155,19 @@ const Header = ({ windows, setWindows }) => {
        })}
       >
        Welcome
+      </button>}
+     {!windows.profile.close &&
+      <button
+       className="border"
+       onClick={() => setWindows({
+        ...windows,
+        profile: {
+         minimise: !windows.profile.minimise,
+         close: false
+        }
+       })}
+      >
+       Profile
       </button>}
     </navbar>
 
