@@ -1,7 +1,10 @@
-nav {
+.nav {
  position: fixed;
  bottom: 0;
  width: 100%;
+}
+
+nav {
  background-color: rgb(246, 236, 255);
  justify-content: space-between;
 }
@@ -23,12 +26,12 @@ nav button {
  gap: 9px;
 }
 
-nav span img {
+.nav nav span img {
  height: 15px;
  width: 15px;
 }
 
-nav img {
+.nav img {
  height: 24px;
  width: 24px;
 }
@@ -55,4 +58,30 @@ nav span hr {
  background-color: rgb(246, 236, 255);
  box-shadow: 2px 2px #cb98d8 inset;
  padding: 6px 6px 0 6px;
+}
+
+.nav ul {
+ width: fit-content;
+ height: fit-content;
+}
+
+.nav li {
+ justify-content: space-between;
+ padding: 9px;
+ background-color: rgb(246, 236, 255);
+}
+
+.nav li:hover, .nav li:hover span {
+ background-color: #7d378f;
+ color: rgb(246, 236, 255);
+}
+
+.nav li span {
+ padding-right: 18px;
+ gap: 9px;
+}
+
+.nav li button {
+ border: 0;
+ box-shadow: none;
 }
