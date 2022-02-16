@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import Desktop from './pages/Desktop'
+import {
+ BrowserRouter,
+ Routes,
+ Route
+} from "react-router-dom";
 import './App.css';
+import './styling/general.css';
+import Clouds from './components/Clouds.js';
+import Stars from './components/Stars.js';
+import Moon from './components/Moon.js'
+import Waves from './components/Waves.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ return (
+  <BrowserRouter>
+   <Stars />
+   <Moon />
+   <Clouds />
+   {/* <Waves /> */}
+   <Routes>
+    <Route path="/" element={<Desktop />} />
+   </Routes>
+  </BrowserRouter>
+ );
 }
 
 export default App;

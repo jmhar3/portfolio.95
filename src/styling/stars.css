@@ -1,0 +1,143 @@
+/* KEYFRAMES */
+
+@-webkit-keyframes animateStar {
+ 0% {
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 100% {
+  opacity: 0;
+ }
+}
+
+@-moz-keyframes animateStar {
+ 0% {
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 100% {
+  opacity: 0;
+ }
+}
+
+@keyframes animateStar {
+ 0% {
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 100% {
+  opacity: 0;
+ }
+}
+
+/* ANIMATIONS */
+
+.s1 {
+	-webkit-animation: animateStar 10s linear infinite;
+	-moz-animation: animateStar 10s linear infinite;
+	animation: animateStar 10s linear infinite;
+	
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+.s2 {
+	-webkit-animation: animateStar 15s linear infinite;
+	-moz-animation: animateStar 15s linear infinite;
+	animation: animateStar 15s linear infinite;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.s3 {
+	-webkit-animation: animateStar 6s linear infinite;
+	-moz-animation: animateStar 6s linear infinite;
+	animation: animateStar 6s linear infinite;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.s4 {
+	-webkit-animation: animateStar 12s linear infinite;
+	-moz-animation: animateStar 12s linear infinite;
+	animation: animateStar 12s linear infinite;
+	
+	-webkit-transform: scale(0.78);
+	-moz-transform: scale(0.78);
+	transform: scale(0.78);
+}
+
+.s5 {
+	-webkit-animation: animateStar 12s linear infinite;
+	-moz-animation: animateStar 12s linear infinite;
+	animation: animateStar 12s linear infinite;
+	
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+}
+
+.s6 {
+	-webkit-animation: animateStar 9s linear infinite;
+	-moz-animation: animateStar 9s linear infinite;
+	animation: animateStar 9s linear infinite;
+	
+	-webkit-transform: scale(0.69);
+	-moz-transform: scale(0.69);
+	transform: scale(0.69);
+}
+
+.s7 {
+	-webkit-animation: animateStar 18s linear infinite;
+	-moz-animation: animateStar 18s linear infinite;
+	animation: animateStar 18s linear infinite;
+	
+	-webkit-transform: scale(0.36);
+	-moz-transform: scale(0.36);
+	transform: scale(0.36);
+}
+
+.s8 {
+	-webkit-animation: animateStar 12s linear infinite;
+	-moz-animation: animateStar 12s linear infinite;
+	animation: animateStar 12s linear infinite;
+	
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.s9 {
+	-webkit-animation: animateStar 18s linear infinite;
+	-moz-animation: animateStar 18s linear infinite;
+	animation: animateStar 18s linear infinite;
+	
+	-webkit-transform: scale(0.48);
+	-moz-transform: scale(0.48);
+	transform: scale(0.48);
+}
+
+/* OBJECTS */
+
+.star {
+	background: rgb(255, 211, 13);
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	z-index: -3;
+
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
