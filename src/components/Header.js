@@ -4,7 +4,12 @@ import email from '../images/email.png';
 import computer from '../images/computer.png';
 import { useState, useEffect } from 'react';
 
-const Header = ({ windows, setWindows }) => {
+const Header = ({
+ windows,
+ setWindows,
+ muted,
+ setMuted
+}) => {
  const [startMenu, setStartMenu] = useState(false);
  const [aboutMenu, setAboutMenu] = useState(false);
  const [programmingMenu, setProgrammingMenu] = useState(false);
@@ -84,6 +89,27 @@ const Header = ({ windows, setWindows }) => {
        setStartMenu(false)
        setWindows({
         ...windows,
+        music: {
+         minimise: false,
+         close: false
+        }
+       })
+      }}
+     >
+      <span className="row center">
+       <img src={computer} />
+       <span>
+        Music Player
+       </span>
+      </span>
+     </li>
+
+     <li
+      className="row center clickable"
+      onClick={() => {
+       setStartMenu(false)
+       setWindows({
+        ...windows,
         welcome: {
          minimise: false,
          close: false
@@ -143,6 +169,19 @@ const Header = ({ windows, setWindows }) => {
       <img src={email} alt="E-Mail" />
      </a>
      <hr className="border" />
+     {!windows.music.close &&
+      <button
+       className="border"
+       onClick={() => setWindows({
+        ...windows,
+        music: {
+         minimise: !windows.music.minimise,
+         close: false
+        }
+       })}
+      >
+       Music Player
+      </button>}
      {!windows.welcome.close &&
       <button
        className="border"
@@ -171,7 +210,12 @@ const Header = ({ windows, setWindows }) => {
       </button>}
     </navbar>
 
-    <span className="rev-border clock center">
+    <span className="rev-border clock center row">
+     <img
+      src={logo}
+      onClick={() => setMuted(!muted)}
+      className="clickable"
+     />
      {`${hour}:${minute}PM`}
     </span>
    </nav>

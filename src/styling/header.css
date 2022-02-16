@@ -58,6 +58,7 @@ nav span hr {
  background-color: rgb(246, 236, 255);
  box-shadow: 2px 2px #cb98d8 inset;
  padding: 6px 6px 0 6px;
+ gap: 6px;
 }
 
 .nav ul {
