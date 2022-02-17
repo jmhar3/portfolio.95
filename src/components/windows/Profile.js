@@ -1,7 +1,10 @@
 import computer from '../../images/computer.png';
 import Draggable from 'react-draggable';
+import About from '../tabs/About';
+import Skills from '../tabs/Skills';
+import Education from '../tabs/Education';
 
-const Welcome = ({ windows, setWindows }) => {
+const Profile = ({ windows, setWindows, tabs, setTabs }) => {
  return (
   <Draggable handle=".profile">
    <div
@@ -10,6 +13,7 @@ const Welcome = ({ windows, setWindows }) => {
    >
     <span className="window-header row profile">
      <h4>PROFILE</h4>
+
      <span className="row window-buttons">
       <button
        className="close-btn center"
@@ -21,6 +25,7 @@ const Welcome = ({ windows, setWindows }) => {
         }
        })}
       >-</button>
+
       <button
        className="close-btn center"
        onClick={() => setWindows({
@@ -32,13 +37,48 @@ const Welcome = ({ windows, setWindows }) => {
        })}
       >&times;</button>
      </span>
+
     </span>
+     <ul className="row tabs clickable">
+      <li
+       className={`tab ${tabs.about && "selected-tab"}`}
+       onClick={() => setTabs({
+        about: true,
+        skills: false,
+        education: false
+       })}
+      >
+       About
+      </li>
+      <li
+       className={`tab ${tabs.skills && "selected-tab"}`}
+       onClick={() => setTabs({
+        about: false,
+        skills: true,
+        education: false
+       })}
+      >
+       Skills
+      </li>
+      <li
+       className={`tab ${tabs.education && "selected-tab"}`}
+       onClick={() => setTabs({
+        about: false,
+        skills: false,
+        education: true
+       })}
+      >
+       Education
+      </li>
+     </ul>
     <span className="window-body">
-     <p>I'm a Software Developer and UI designer currently working at HealthAide. When I'm not hard at work I'm cuddling with my dog, playing video games or (more often than not) a bit of both. In my off time I enjoy building and creating in many ways, from Lego and puzzles to coding my own fun little projects.</p>
+     {tabs.about && <About/>}
+     {tabs.skills && <Skills/>}
+     {tabs.education && <Education/>}
     </span>
    </div>
   </Draggable>
  )
 }
 
-export default Welcome;
+export default Profile;

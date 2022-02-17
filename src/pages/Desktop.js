@@ -17,9 +17,15 @@ const Desktop = () => {
    close: true
   },
   music: {
-   minimise: false,
+   minimise: true,
    close: false
   }
+ })
+
+ const [tabs, setTabs] = useState({
+  about: false,
+  skills: true,
+  education: false
  })
 
  return (
@@ -34,6 +40,8 @@ const Desktop = () => {
     <Profile
      windows={windows}
      setWindows={setWindows}
+     tabs={tabs}
+     setTabs={setTabs}
     />}
     {!windows.music.close &&
      <Music
@@ -47,6 +55,7 @@ const Desktop = () => {
     setWindows={setWindows}
     muted={muted}
     setMuted={setMuted}
+    setTabs={setTabs}
    />
   </div>
  )

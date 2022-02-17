@@ -9,7 +9,7 @@ const Welcome = ({ windows, setWindows }) => {
     id="welcome"
    >
     <span className="window-header row welcome">
-     <h4>JESSICA HARRIMAN</h4>
+     <h4>WELCOME</h4>
      <span className="row window-buttons">
       <button
        className="close-btn center"
@@ -38,7 +38,7 @@ const Welcome = ({ windows, setWindows }) => {
       <img src={computer} alt="computer" />
       <span className="column">
        {/* <h5>My name is Jessica Harriman</h5> */}
-       <p>Welcome to my portfolio.</p>
+       <p>Hi, my name is Jessica Harriman.</p>
       </span>
      </span>
      <button
@@ -52,7 +52,7 @@ const Welcome = ({ windows, setWindows }) => {
         minimise: false,
         close: false
        }})}>
-        Enter
+        Learn More
      </button>
    </span>
   </div>

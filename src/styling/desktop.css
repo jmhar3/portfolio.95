@@ -42,13 +42,40 @@
  margin-bottom: 9px;
 }
 
-.window-body .row {
- gap: 9px;
-}
-
 .window-body img {
  width: 30px;
  height: 30px;
+}
+
+.tabs {
+ margin: 9px 9px 0 9px;
+}
+
+.tab {
+ padding: 3px 5px;
+ border-left: 2px solid #fff;
+ border-top: 2px solid #fff;
+ border-bottom: 2px solid #fff;
+ border-right: 2px solid #55036b;
+ border-radius: 5px 5px 0 0;
+ box-shadow: -2px 0px #cb98d8 inset;
+}
+
+.selected-tab {
+ border-bottom: 2px solid rgb(246, 236, 255);
+}
+
+.skills td, .skills th {
+ text-align: left;
+}
+
+.skills tr td:nth-of-type(2), .skills tr th:nth-of-type(2) {
+ padding: 0 15px;
+}
+
+table {
+ padding-top: 3px;
+ margin: 0 9px 9px 9px;
 }
 
 #profile p {

@@ -61,7 +61,7 @@ const Header = ({
       }}>
       <span className="row center">
        <img src={computer} />
-       About
+       Profile
       </span>
       ►
      </li>
@@ -130,7 +130,7 @@ const Header = ({
      className={`${!aboutMenu && "remove"} border clickable`}
      onMouseLeave={() => setAboutMenu(false)}
     >
-     <li>Profile</li>
+     <li>About</li>
      <li>Skills</li>
      <li>Education</li>
     </ul>
@@ -147,7 +147,7 @@ const Header = ({
 
    <nav className="row">
     <navbar>
-     <span className="row">
+     <span className="row start">
       <button
        className="border"
        onClick={() => {

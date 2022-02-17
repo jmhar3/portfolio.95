@@ -37,9 +37,9 @@ const Music = ({ windows, setWindows, muted }) => {
     <span className="window-body">
      <ReactAudioPlayer
       src={lofi}
-      autoPlay
-      controls
-      loop
+      autoPlay={true}
+      controls={true}
+      loop={true}
       muted={muted}
      />
     </span>
