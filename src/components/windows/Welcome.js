@@ -1,7 +1,8 @@
 import computer from '../../images/computer.png';
 import Draggable from 'react-draggable';
+import Typewriter from 'typewriter-effect';
 
-const Welcome = ({ windows, setWindows }) => {
+const Welcome = ({ windows, setWindows, setTabs }) => {
  return (
   <Draggable handle=".welcome">
    <div
@@ -34,24 +35,35 @@ const Welcome = ({ windows, setWindows }) => {
      </span>
     </span>
     <span className="window-body">
-     <span className="row center">
-      <img src={computer} alt="computer" />
+     <span className="row center intro">
+      {/* <img src={computer} alt="computer" /> */}
       <span className="column">
-       {/* <h5>My name is Jessica Harriman</h5> */}
-       <p>Hi, my name is Jessica Harriman.</p>
+       <h4><Typewriter
+        onInit={(typewriter) => {
+         typewriter.typeString("Hi, my name's Jessica Harriman")
+          .start();
+        }}
+       /></h4>
       </span>
      </span>
      <button
-      onClick={() => setWindows({
-       ...windows,
-       welcome: {
-        minimise: false,
-        close: true
-       },
-       profile: {
-        minimise: false,
-        close: false
-       }})}>
+      onClick={() => {
+       setWindows({
+        ...windows,
+        welcome: {
+         minimise: false,
+         close: true
+        },
+        profile: {
+         minimise: false,
+         close: false
+        }})
+        setTabs({
+         about: true,
+         skills: false,
+         education: false
+        })
+      }}>
         Learn More
      </button>
    </span>

@@ -2,6 +2,7 @@ import Links from '../components/Links';
 import Welcome from '../components/windows/Welcome';
 import Profile from '../components/windows/Profile';
 import Music from '../components/windows/Music';
+import MineSweeper from '../components/windows/MineSweeper';
 import Header from '../components/Header.js';
 import { useState } from 'react';
 
@@ -19,13 +20,19 @@ const Desktop = () => {
   music: {
    minimise: true,
    close: false
+  },
+  minesweeper: {
+   minimise: false,
+   close: true
   }
  })
 
  const [tabs, setTabs] = useState({
-  about: false,
-  skills: true,
-  education: false
+  about: true,
+  skills: false,
+  education: false,
+  work: false,
+  projects: false
  })
 
  return (
@@ -43,13 +50,18 @@ const Desktop = () => {
      tabs={tabs}
      setTabs={setTabs}
     />}
-    {!windows.music.close &&
-     <Music
-      windows={windows}
-      setWindows={setWindows}
-      muted={muted}
-      setMuted={setMuted}
-     />}
+   {!windows.music.close &&
+    <Music
+     windows={windows}
+     setWindows={setWindows}
+     muted={muted}
+     setMuted={setMuted}
+    />}
+   {!windows.minesweeper.close &&
+    <MineSweeper
+     windows={windows}
+     setWindows={setWindows}
+    />}
    <Header
     windows={windows}
     setWindows={setWindows}

@@ -1,7 +1,9 @@
 const Skills = () => {
  const skills = [
+  ["CSS", "360 KB", "Front End"],
   ["Javascript", "390 KB", "Front End"],
-  ["React", "300 KB", "Front End"],
+  ["React", "360 KB", "Front End"],
+  ["Redux", "300 KB", "Front End"],
   ["Ruby", "240 KB", "Back End"],
   ["Rails", "210 KB", "Back End"],
   ["PostgreSQL", "330 KB", "Database"],

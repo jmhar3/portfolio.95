@@ -65,11 +65,11 @@
  border-bottom: 2px solid rgb(246, 236, 255);
 }
 
-.skills td, .skills th {
+td, th {
  text-align: left;
 }
 
-.skills tr td:nth-of-type(2), .skills tr th:nth-of-type(2) {
+tr td:nth-of-type(2), tr th:nth-of-type(2) {
  padding: 0 15px;
 }
 
@@ -82,6 +82,112 @@ table {
  width: 390px;
 }
 
-audio {
- background-color: rgb(246, 236, 255);
+.intro {
+ width: 240px;
+}
+
+.intro h4 {
+ padding-left: 15px;
+}
+
+#play-pause img, #rewind-icon img, #forward-icon img {
+ width: 24px;
+ height: 24px;
+}
+
+#mute-icon {
+ height: 15px;
+ width: 15px;
+}
+
+#play-pause, #rewind-icon, #forward-icon {
+ border: none;
+ box-shadow: none;
+}
+
+.audio-player span {
+ gap: 6px;
+}
+
+/* Slider Styling */
+
+input[type=range] {
+ -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+ outline: none;
+}
+
+
+/* #55036b
+#cb98d8
+rgb(246, 236, 255); */
+
+input[type=range]::-webkit-slider-runnable-track {
+ width: 100%;
+ height: 9px;
+ background: rgb(205, 239, 255);
+ border-radius: 50px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+ border: none;
+ height: 18px;
+ width: 18px;
+ border-radius: 50px;
+ background: #55036b;
+ -webkit-appearance: none;
+ margin-top: -4.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+ background: rgb(205, 239, 255);
+}
+
+input[type=range]::-moz-range-track {
+ width: 100%;
+ height: 9px;
+ background: #cb98d8;
+ border-radius: 50px;
+}
+
+input[type=range]::-moz-range-thumb {
+ height: 18px;
+ width: 18px;
+ border-radius: 50px;
+ background: #ffffff;
+}
+
+input[type=range]::-ms-track {
+ width: 100%;
+ height: 9px;
+ background: transparent;
+ border-color: transparent;
+ color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+ background: #cb98d8;
+ border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+ background: #cb98d8;
+ border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+ height: 18px;
+ width: 18px;
+ border-radius: 50px;
+ background: #ffffff;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+ background: #cb98d8;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+ background: rgb(205, 239, 255);
 }

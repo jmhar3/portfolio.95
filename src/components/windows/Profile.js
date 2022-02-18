@@ -1,8 +1,9 @@
-import computer from '../../images/computer.png';
 import Draggable from 'react-draggable';
 import About from '../tabs/About';
 import Skills from '../tabs/Skills';
 import Education from '../tabs/Education';
+import Work from '../tabs/Work';
+import Projects from '../tabs/Projects';
 
 const Profile = ({ windows, setWindows, tabs, setTabs }) => {
  return (
@@ -45,7 +46,9 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
        onClick={() => setTabs({
         about: true,
         skills: false,
-        education: false
+        education: false,
+        work: false,
+        projects: false
        })}
       >
        About
@@ -55,7 +58,9 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
        onClick={() => setTabs({
         about: false,
         skills: true,
-        education: false
+        education: false,
+        work: false,
+        projects: false
        })}
       >
        Skills
@@ -65,16 +70,44 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
        onClick={() => setTabs({
         about: false,
         skills: false,
-        education: true
+        education: true,
+        work: false,
+        projects: false
        })}
       >
        Education
+      </li>
+      <li
+       className={`tab ${tabs.education && "selected-tab"}`}
+       onClick={() => setTabs({
+        about: false,
+        skills: false,
+        education: false,
+        work: true,
+        projects: false
+       })}
+      >
+       Work
+      </li>
+      <li
+       className={`tab ${tabs.education && "selected-tab"}`}
+       onClick={() => setTabs({
+        about: false,
+        skills: false,
+        education: false,
+        work: false,
+        projects: true
+       })}
+      >
+       Projects
       </li>
      </ul>
     <span className="window-body">
      {tabs.about && <About/>}
      {tabs.skills && <Skills/>}
      {tabs.education && <Education/>}
+     {tabs.work && <Work/>}
+     {tabs.projects && <Projects/>}
     </span>
    </div>
   </Draggable>

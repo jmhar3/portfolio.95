@@ -8,11 +8,13 @@ const Header = ({
  windows,
  setWindows,
  muted,
- setMuted
+ setMuted,
+ tabs,
+ setTabs
 }) => {
  const [startMenu, setStartMenu] = useState(false);
  const [aboutMenu, setAboutMenu] = useState(false);
- const [programmingMenu, setProgrammingMenu] = useState(false);
+ const [programsMenu, setProgramsMenu] = useState(false);
  const [date, setDate] = useState(new Date());
 
  function refreshClock() {
@@ -57,7 +59,7 @@ const Header = ({
       className="row center"
       onMouseEnter={() => {
        setAboutMenu(true)
-       setProgrammingMenu(false)
+       setProgramsMenu(false)
       }}>
       <span className="row center">
        <img src={computer} />
@@ -70,41 +72,20 @@ const Header = ({
       className="row center"
       onMouseEnter={() => {
        setAboutMenu(false)
-       setProgrammingMenu(true)
+       setProgramsMenu(true)
       }}>
       <span className="row center">
        <img src={computer} />
-       Programming
+       Programs
       </span>
       ►
      </li>
 
      <li
-      className="row center clickable"
       onMouseEnter={() => {
        setAboutMenu(false)
-       setProgrammingMenu(false)
+       setProgramsMenu(false)
       }}
-      onClick={() => {
-       setStartMenu(false)
-       setWindows({
-        ...windows,
-        music: {
-         minimise: false,
-         close: false
-        }
-       })
-      }}
-     >
-      <span className="row center">
-       <img src={computer} />
-       <span>
-        Music Player
-       </span>
-      </span>
-     </li>
-
-     <li
       className="row center clickable"
       onClick={() => {
        setStartMenu(false)
@@ -126,21 +107,160 @@ const Header = ({
      </li>
     </ul>
 
+    {/* About Menu */}
     <ul
      className={`${!aboutMenu && "remove"} border clickable`}
      onMouseLeave={() => setAboutMenu(false)}
     >
-     <li>About</li>
-     <li>Skills</li>
-     <li>Education</li>
+     <li
+      onClick={() => {
+       setStartMenu(false)
+       setAboutMenu(false)
+       setWindows({
+        ...windows,
+        profile: {
+         minimise: false,
+         close: false
+        }
+       })
+       setTabs({
+        about: true,
+        skills: false,
+        education: false,
+        work: false,
+        projects: false
+       })
+      }}
+     >
+      About
+     </li>
+     <li
+      onClick={() => {
+       setStartMenu(false)
+       setAboutMenu(false)
+       setWindows({
+        ...windows,
+        profile: {
+         minimise: false,
+         close: false
+        }
+       })
+       setTabs({
+        about: false,
+        skills: true,
+        education: false,
+        work: false,
+        projects: false
+       })
+      }}
+     >
+      Skills
+     </li>
+     <li
+      onClick={() => {
+       setStartMenu(false)
+       setAboutMenu(false)
+       setWindows({
+        ...windows,
+        profile: {
+         minimise: false,
+         close: false
+        }
+       })
+       setTabs({
+        about: false,
+        skills: false,
+        education: true,
+        work: false,
+        projects: false
+       })
+      }}
+     >
+      Education
+     </li>
+     <li
+      onClick={() => {
+       setStartMenu(false)
+       setAboutMenu(false)
+       setWindows({
+        ...windows,
+        profile: {
+         minimise: false,
+         close: false
+        }
+       })
+       setTabs({
+        about: false,
+        skills: false,
+        education: false,
+        work: true,
+        projects: false
+       })
+      }}
+     >
+      Work
+     </li>
+     <li
+      onClick={() => {
+       setStartMenu(false)
+       setAboutMenu(false)
+       setWindows({
+        ...windows,
+        profile: {
+         minimise: false,
+         close: false
+        }
+       })
+       setTabs({
+        about: false,
+        skills: false,
+        education: false,
+        work: false,
+        projects: true
+       })
+      }}
+     >
+      Projects
+     </li>
     </ul>
 
+    {/* Programs Menu */}
     <ul
-     className={`${!programmingMenu && "remove"} border clickable`}
-     onMouseLeave={() => setProgrammingMenu(false)}
+     className={`${!programsMenu && "remove"} border clickable`}
+     onMouseLeave={() => setProgramsMenu(false)}
     >
-     <li>Work</li>
-     <li>Projects</li>
+     <li
+      onClick={() => {
+       setStartMenu(false)
+       setProgramsMenu(false)
+       setWindows({
+        ...windows,
+        music: {
+         minimise: false,
+         close: false
+        }
+       })
+      }}
+     >
+      Music Player
+     </li>
+
+     <li
+      className="row center clickable"
+      onClick={() => {
+       setProgramsMenu(false)
+       setStartMenu(false)
+       setWindows({
+        ...windows,
+        minesweeper: {
+         minimise: false,
+         close: false
+        }
+       })
+      }}
+     >
+      MineSweeper
+     </li>
     </ul>
    </span>
 
@@ -154,7 +274,7 @@ const Header = ({
         setStartMenu(!startMenu)
         if (startMenu) {
          setAboutMenu(false)
-         setProgrammingMenu(false)
+         setProgramsMenu(false)
         }
        }}>
        <img src={logo} alt="JH" />
@@ -169,52 +289,71 @@ const Header = ({
       <img src={email} alt="E-Mail" />
      </a>
      <hr className="border" />
-     {!windows.music.close &&
-      <button
-       className="border"
-       onClick={() => setWindows({
-        ...windows,
-        music: {
-         minimise: !windows.music.minimise,
-         close: false
-        }
-       })}
-      >
-       Music Player
-      </button>}
-     {!windows.welcome.close &&
-      <button
-       className="border"
-       onClick={() => setWindows({
-        ...windows,
-        welcome: {
-         minimise: !windows.welcome.minimise,
-         close: false
-        }
-       })}
-      >
-       Welcome
-      </button>}
-     {!windows.profile.close &&
-      <button
-       className="border"
-       onClick={() => setWindows({
-        ...windows,
-        profile: {
-         minimise: !windows.profile.minimise,
-         close: false
-        }
-       })}
-      >
-       Profile
-      </button>}
+
+     <span className="window-buttons row">
+      {!windows.music.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         music: {
+          minimise: !windows.music.minimise,
+          close: false
+         }
+        })}
+       >
+        Music Player
+       </button>}
+
+      {!windows.welcome.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         welcome: {
+          minimise: !windows.welcome.minimise,
+          close: false
+         }
+        })}
+       >
+        Welcome
+       </button>}
+
+      {!windows.profile.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         profile: {
+          minimise: !windows.profile.minimise,
+          close: false
+         }
+        })}
+       >
+        Profile
+       </button>}
+
+      {!windows.minesweeper.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         minesweeper: {
+          minimise: !windows.minesweeper.minimise,
+          close: false
+         }
+        })}
+       >
+        MineSweeper
+       </button>}
+     </span>
     </navbar>
 
     <span className="rev-border clock center row">
      <img
       src={logo}
       onClick={() => setMuted(!muted)}
-      className="clickable"
+      className="clickable mute"
      />
      {`${hour}:${minute}PM`}
     </span>
