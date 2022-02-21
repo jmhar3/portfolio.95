@@ -1,10 +1,13 @@
-import Links from '../components/Links';
-import Welcome from '../components/windows/Welcome';
-import Profile from '../components/windows/Profile';
-import Music from '../components/windows/Music';
-import MineSweeper from '../components/windows/MineSweeper';
-import Header from '../components/Header.js';
+import Links from './components/Links';
+import Welcome from './components/windows/Welcome';
+import Profile from './components/windows/Profile';
+import Music from './components/windows/Music';
+import MineSweeper from './components/windows/MineSweeper';
+import Header from './components/Header.js';
 import { useState } from 'react';
+import '../styling/desktop.css';
+import '../styling/header.css';
+import '../styling/links.css';
 
 const Desktop = () => {
  const [muted, setMuted] = useState(false)

@@ -1,7 +1,6 @@
-import '../styling/header.css';
-import logo from '../images/heart.png';
-import email from '../images/email.png';
-import computer from '../images/computer.png';
+import logo from '../../images/heart.png';
+import email from '../../images/email.png';
+import computer from '../../images/computer.png';
 import { useState, useEffect } from 'react';
 
 const Header = ({
@@ -53,7 +52,7 @@ const Header = ({
   <div className="nav">
    <span className="row">
     <ul
-     className={`${!startMenu && "hidden"} border`}
+     className={`${!startMenu && "hidden"} border start-menu`}
     >
      <li
       className="row center"

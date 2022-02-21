@@ -18,3 +18,63 @@ nav button {
  font-family: 'MS_Sans_Serif_8pt_bold', sans-serif;
  font-size: 15px;
 }
+
+@media (prefers-color-scheme: dark) {
+ body {
+ background: #0e0133;
+ }
+}
+
+@media (prefers-color-scheme: light) {
+ body {
+  background: #fcfbff;
+ }
+}
+
+body {
+ cursor: url('./images/cursor.png'), auto;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+button, a {
+ cursor: url('./images/hover cursor.png'), auto;
+ text-decoration: none;
+}
+
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+
+.clickable {
+ cursor: url('./images/hover cursor.png'), auto;
+}
+
+.hidden {
+ visibility: hidden;
+}
+
+.remove {
+ display: none;
+}
+
+.row {
+ display: flex;
+ flex-direction: row;
+}
+
+.column {
+ display: flex;
+ flex-direction: column;
+}
+
+.center {
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ align-items: center;
+}

@@ -1,4 +1,4 @@
-import '../../styling/waves.css';
+import '../styling/waves.css';
 
 const Waves = () => {
  return (

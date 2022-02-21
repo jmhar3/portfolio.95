@@ -1,4 +1,3 @@
-import computer from '../../images/computer.png';
 import Draggable from 'react-draggable';
 import Typewriter from 'typewriter-effect';
 

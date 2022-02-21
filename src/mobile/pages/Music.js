@@ -6,13 +6,12 @@ import play from '../../images/play.png';
 import pause from '../../images/pause.png';
 import speed from '../../images/speed.png';
 import mute from '../../images/heart.png';
+import '../../styling/mobile.css';
 
 const Music = ({ windows, setWindows, muted }) => {
  const [playing, setPlaying] = useState(true);
  const [duration, setDuration] = useState(3.41);
  const [current, setCurrent] = useState(2.18);
-
- // const removeDecimal = (value) => value.split(".").join(":")
 
  return (
   <Draggable handle=".music">
@@ -47,13 +46,13 @@ const Music = ({ windows, setWindows, muted }) => {
     </span>
     <span className="window-body">
      <span className="column">
-      {/* <ReactAudioPlayer
+      <ReactAudioPlayer
        src={lofi}
-       controls={true}
+       // controls={true}
        autoPlay={true}
        loop={true}
        muted={muted}
-      /> */}
+      />
 
 
       <audio id="audio">

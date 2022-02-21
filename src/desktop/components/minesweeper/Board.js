@@ -3,41 +3,44 @@ import CreateBoard from './CreateBoard';
 import { revealed } from "./Reveal";
 import Cell from './Cell';
 
-function Board() {
+function Board({ setGameOver, handleStart, handleStop, mineCount, setMineCount }) {
  const [grid, setGrid] = useState([]);
  const [nonMinecount, setNonMinecount] = useState(0);
  const [mineLocation, setmineLocation] = useState([]);
+ const [isFreshBoard, setIsFreshBoard] = useState(true);
 
  const style = {
   display: 'flex',
   flexDirection: 'row',
-  width: 'fit-content',
-  color: 'white',
-
+  width: 'fit-content'
  }
- useEffect(() => {
 
+ useEffect(() => {
   freshBoard();
  }, []);
 
- // Making freshboard atstart
  const freshBoard = () => {
-  const newBoard = CreateBoard(10, 10, 20);
-  setNonMinecount(10 * 10 - 20);
+  const newBoard = CreateBoard(9, 9, 10);
+  setNonMinecount(9 * 9 - 10);
   setmineLocation(newBoard.mineLocation);
   setGrid(newBoard.board);
+  setIsFreshBoard(true);
+  setMineCount(10);
  }
+
  const updateFlag = (e, x, y) => {
   e.preventDefault();
-  // deep copy of the object
   let newGrid = JSON.parse(JSON.stringify(grid));
   newGrid[x][y].flagged = true;
   console.log(newGrid[x][y]);
+  if (newGrid[x][y].value === "X") setMineCount(mineCount - 1)
   setGrid(newGrid);
  }
+
  const newfresh = () => {
   freshBoard();
  }
+
  const revealcell = (x, y) => {
   let newGrid = JSON.parse(JSON.stringify(grid));
   if (newGrid[x][y].value === "X") {
@@ -46,11 +49,14 @@ function Board() {
     newGrid[mineLocation[i][0]][mineLocation[i][1]].revealed = true;
    }
    setGrid(newGrid);
-   setTimeout(newfresh, 500);
+   setGameOver(true);
+   handleStop();
+   // setTimeout(newfresh, 500);
   }
   if (nonMinecount === 0) {
    // WINNER WINNER CHICKEN DINNER
-   setTimeout(newfresh, 500);
+   handleStop();
+   // setTimeout(newfresh, 500);
   }
   else {
    let revealedboard = revealed(newGrid, x, y, nonMinecount);
@@ -67,7 +73,17 @@ function Board() {
      return (
       <div style={style} key={index1}>
        {singlerow.map((singlecol, index2) => {
-        return <Cell details={singlecol} key={index2} updateFlag={updateFlag} revealcell={revealcell} />
+        return <Cell
+         details={singlecol}
+         key={index2}
+         updateFlag={updateFlag}
+         revealcell={revealcell}
+         handleStart={handleStart}
+         isFreshBoard={isFreshBoard}
+         setIsFreshBoard={setIsFreshBoard}
+         mineCount={mineCount}
+         setMineCount={setMineCount}
+        />
        })}
 
       </div>

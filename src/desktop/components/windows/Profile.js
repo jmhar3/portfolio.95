@@ -78,7 +78,7 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
        Education
       </li>
       <li
-       className={`tab ${tabs.education && "selected-tab"}`}
+       className={`tab ${tabs.work && "selected-tab"}`}
        onClick={() => setTabs({
         about: false,
         skills: false,
@@ -90,7 +90,7 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
        Work
       </li>
       <li
-       className={`tab ${tabs.education && "selected-tab"}`}
+       className={`tab ${tabs.projects && "selected-tab"}`}
        onClick={() => setTabs({
         about: false,
         skills: false,
