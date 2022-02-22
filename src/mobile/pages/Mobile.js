@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import message from '../../images/heart.png';
+import message from '../../images/coding.png';
 import { useNavigate } from "react-router-dom";
 import '../../styling/mobile.css';
+import Clouds from '../../background/Clouds.js';
+import Stars from '../../background/Stars.js';
 
 const Mobile = () => {
  const [date, setDate] = useState(new Date());
@@ -73,22 +75,33 @@ const Mobile = () => {
  let navigate = useNavigate();
 
  return (
-  <button
-   id="lockscreen"
-   className="column center"
-   onClick={() => navigate('/home')}
-  >
-   <h1>{`${hour}:${minute}`}</h1>
-   <h3>{`${weekday}, ${month} ${day}`}</h3>
-   <div id="notification" className="row">
-    <img src={message} />
-    <span className="column">
-     <h3>Jessica Harriman</h3>
-     <p>Welcome to my portfolio.</p>
+  <>
+   <button
+    id="lockscreen"
+    className="column center"
+    onClick={() => navigate('/home')}
+   >
+    <h1>{`${hour}:${minute}`}</h1>
+    <h3>{`${weekday}, ${month} ${day}`}</h3>
+    <div id="notification" className="row">
+     <img src={message} />
+     <span className="column">
+      <h3>Jessica Harriman</h3>
+      <p>Welcome to my portfolio.</p>
+     </span>
+    </div>
+    <span className="unlock column center">
+     <div className="ripple-container center">
+      <div className="ripple"></div>
+      <div className="ripple"></div>
+     </div>
+     <h3>touch to open</h3>
     </span>
-   </div>
-   <h3 className="unlock">touch to open</h3>
-  </button>
+   </button>
+
+   <Stars />
+   {/* <Clouds /> */}
+  </>
  )
 }
 

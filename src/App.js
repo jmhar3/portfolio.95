@@ -7,6 +7,8 @@ import Music from './mobile/pages/Music';
 import Projects from './mobile/pages/Projects';
 import Skills from './mobile/pages/Skills';
 import Work from './mobile/pages/Work';
+import HealthAide from './mobile/pages/HealthAide';
+import Lurey from './mobile/pages/Lurey';
 import { useState, useEffect } from 'react';
 import {
  BrowserRouter,
@@ -14,10 +16,6 @@ import {
  Route
 } from "react-router-dom";
 import './App.css';
-import Clouds from './background/Clouds.js';
-import Stars from './background/Stars.js';
-import Moon from './background/Moon.js';
-import Waves from './background/Waves.js';
 
 function App() {
  const [isMobile, setIsMobile] = useState(true);
@@ -40,14 +38,12 @@ function App() {
     <Route path="work" element={<Work />} />
     <Route path="music" element={<Music />} />
     <Route path="projects" element={<Projects />} />
+    <Route path="healthAide" element={<HealthAide />} />
+    <Route path="lurey" element={<Lurey />} />
    </Routes> :
    <Routes>
    <Route path="/" element={<Desktop />} />
   </Routes>}
-   <Stars />
-   <Clouds />
-   {!isMobile && <Moon />}
-   {/* <Waves /> */}
   </BrowserRouter>
  );
 }

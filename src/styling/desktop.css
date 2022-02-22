@@ -1,3 +1,24 @@
+@media (prefers-color-scheme: dark) {
+ body {
+ background: #0e0133;
+ }
+}
+
+@media (prefers-color-scheme: light) {
+ body {
+  background: #fcfbff;
+ }
+}
+
+h1, h2, h3, h4, h5, p, li, div, button, span {
+ color: #55036b;
+ text-align: center;
+}
+
+.star {
+	background: rgb(255, 232, 130);
+}
+
 .border {
  border-left: 2px solid #fff;
  border-top: 2px solid #fff;

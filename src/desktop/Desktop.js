@@ -1,3 +1,6 @@
+import Clouds from '../background/Clouds.js';
+import Stars from '../background/Stars.js';
+import Moon from '../background/Moon.js';
 import Links from './components/Links';
 import Welcome from './components/windows/Welcome';
 import Profile from './components/windows/Profile';
@@ -9,7 +12,7 @@ import '../styling/desktop.css';
 import '../styling/header.css';
 import '../styling/links.css';
 
-const Desktop = () => {
+const Desktop = ({isMobile}) => {
  const [muted, setMuted] = useState(false)
  const [windows, setWindows] = useState({
   welcome: {
@@ -39,40 +42,46 @@ const Desktop = () => {
  })
 
  return (
-  <div id="desktop">
-   <Links />
-   {!windows.welcome.close &&
-    <Welcome
-     windows={windows}
-     setWindows={setWindows}
-    />}
-   {!windows.profile.close &&
-    <Profile
-     windows={windows}
-     setWindows={setWindows}
-     tabs={tabs}
-     setTabs={setTabs}
-    />}
-   {!windows.music.close &&
-    <Music
+  <>
+   <div id="desktop">
+    <Links />
+    {!windows.welcome.close &&
+     <Welcome
+      windows={windows}
+      setWindows={setWindows}
+     />}
+    {!windows.profile.close &&
+     <Profile
+      windows={windows}
+      setWindows={setWindows}
+      tabs={tabs}
+      setTabs={setTabs}
+     />}
+    {!windows.music.close &&
+     <Music
+      windows={windows}
+      setWindows={setWindows}
+      muted={muted}
+      setMuted={setMuted}
+     />}
+    {!windows.minesweeper.close &&
+     <MineSweeper
+      windows={windows}
+      setWindows={setWindows}
+     />}
+    <Header
      windows={windows}
      setWindows={setWindows}
      muted={muted}
      setMuted={setMuted}
-    />}
-   {!windows.minesweeper.close &&
-    <MineSweeper
-     windows={windows}
-     setWindows={setWindows}
-    />}
-   <Header
-    windows={windows}
-    setWindows={setWindows}
-    muted={muted}
-    setMuted={setMuted}
-    setTabs={setTabs}
-   />
-  </div>
+     setTabs={setTabs}
+    />
+   </div>
+
+   <Stars />
+   <Clouds />
+   <Moon />
+  </>
  )
 }
 

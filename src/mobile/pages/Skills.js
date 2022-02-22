@@ -1,7 +1,16 @@
 import '../../styling/mobile.css';
 import { Link } from "react-router-dom";
+import { useSwipeable } from 'react-swipeable';
+import { useNavigate } from 'react-router-dom';
 
 const Skills = () => {
+ let navigate = useNavigate();
+
+ const handlers = useSwipeable({
+  onSwipedRight: () => navigate("/about"),
+  onSwipedLeft: () => navigate("/education")
+ });
+
  const skills = [
   ["CSS", "360 KB", "Front End"],
   ["Javascript", "390 KB", "Front End"],
@@ -25,8 +34,8 @@ const Skills = () => {
  }
 
  return (
-  <div className="skills">
-   <div className="skills-header row center">
+  <div className="skills app" {...handlers}>
+   <div className="mobile-header row center">
     <Link to="/home" className="row center">
      <h2>{`<`}</h2>
      <h3>Home</h3>

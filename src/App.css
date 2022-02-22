@@ -10,25 +10,11 @@
 
 h1, h2, h3, h4, h5, p, li, div, button, span {
  font-family: 'MS_Sans_Serif_8pt', sans-serif;
- color: #55036b;
- text-align: center;
 }
 
 nav button {
  font-family: 'MS_Sans_Serif_8pt_bold', sans-serif;
  font-size: 15px;
-}
-
-@media (prefers-color-scheme: dark) {
- body {
- background: #0e0133;
- }
-}
-
-@media (prefers-color-scheme: light) {
- body {
-  background: #fcfbff;
- }
 }
 
 body {
