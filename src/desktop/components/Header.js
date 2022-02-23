@@ -292,20 +292,6 @@ const Header = ({
      <hr className="border" />
 
      <span className="window-buttons row">
-      {!windows.music.close &&
-       <button
-        className="border"
-        onClick={() => setWindows({
-         ...windows,
-         music: {
-          minimise: !windows.music.minimise,
-          close: false
-         }
-        })}
-       >
-        Music Player
-       </button>}
-
       {!windows.welcome.close &&
        <button
         className="border"
@@ -332,6 +318,62 @@ const Header = ({
         })}
        >
         Profile
+       </button>}
+
+      {!windows.dreamjournal.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         dreamjournal: {
+          minimise: !windows.dreamjournal.minimise,
+          close: false
+         }
+        })}
+       >
+        DreamJournal
+       </button>}
+
+      {!windows.glasshouse.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         glasshouse: {
+          minimise: !windows.glasshouse.minimise,
+          close: false
+         }
+        })}
+       >
+        Glasshouse
+       </button>}
+
+      {!windows.apocalypto.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         apocalypto: {
+          minimise: !windows.apocalypto.minimise,
+          close: false
+         }
+        })}
+       >
+        Apocalypto
+       </button>}
+
+      {!windows.music.close &&
+       <button
+        className="border"
+        onClick={() => setWindows({
+         ...windows,
+         music: {
+          minimise: !windows.music.minimise,
+          close: false
+         }
+        })}
+       >
+        Music Player
        </button>}
 
       {!windows.minesweeper.close &&

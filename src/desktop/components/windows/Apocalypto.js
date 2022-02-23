@@ -1,20 +1,20 @@
 import Draggable from 'react-draggable';
 
-const DreamJournal = ({ windows, setWindows }) => {
+const Apocalypto = ({ windows, setWindows }) => {
  return (
-  <Draggable handle=".dreamjournal">
+  <Draggable handle=".apocalypto">
    <div
-    className={`window border ${windows.dreamjournal.minimise && "hidden"}`}
-    id="dreamjournal"
+    className={`window border ${windows.apocalypto.minimise && "hidden"}`}
+    id="apocalypto"
    >
-    <span className="window-header row dreamjournal">
-     <h4>DREAMJOURNAL</h4>
+    <span className="window-header row apocalypto">
+     <h4>APOCALYPTO</h4>
      <span className="row window-buttons">
       <button
        className="close-btn center"
        onClick={() => setWindows({
         ...windows,
-        dreamjournal: {
+        apocalypto: {
          minimise: true,
          close: false
         }
@@ -24,7 +24,7 @@ const DreamJournal = ({ windows, setWindows }) => {
        className="close-btn center"
        onClick={() => setWindows({
         ...windows,
-        dreamjournal: {
+        apocalypto: {
          minimise: false,
          close: true
         }
@@ -33,11 +33,21 @@ const DreamJournal = ({ windows, setWindows }) => {
      </span>
     </span>
     <span className="window-body">
-     <h1>Hello World</h1>
+     <div className="url rev-border">
+      <a
+       href="https://github.com/jmhar3/apocalypto"
+       target="_blank"
+      >
+       <h4>apocalypto.com</h4>
+      </a>
+     </div>
+     <div className="browser rev-border">
+       <iframe src="https://github.com/jmhar3/apocalypto"/>
+     </div>
     </span>
    </div>
   </Draggable >
  )
 }
 
-export default DreamJournal;
+export default Apocalypto;

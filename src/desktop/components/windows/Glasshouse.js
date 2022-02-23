@@ -1,42 +1,54 @@
 import Draggable from 'react-draggable';
+import { ResizableBox } from 'react-resizable';
+import { useState } from 'react';
 
 const Glasshouse = ({ windows, setWindows }) => {
  return (
-  <Draggable handle=".glasshouse">
-   <div
-    className={`window border ${windows.glasshouse.minimise && "hidden"}`}
-    id="glasshouse"
-   >
-    <span className="window-header row glasshouse">
-     <h4>GLASSHOUSE</h4>
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        glasshouse: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        glasshouse: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
+   <Draggable handle=".glasshouse">
+    <ResizableBox
+     className={`window border ${windows.glasshouse.minimise && "hidden"}`}
+     id="glasshouse"
+    >
+     <span className="window-header row glasshouse">
+      <h4>GLASSHOUSE</h4>
+      <span className="row window-buttons">
+       <button
+        className="close-btn center"
+        onClick={() => setWindows({
+         ...windows,
+         glasshouse: {
+          minimise: true,
+          close: false
+         }
+        })}
+       >-</button>
+       <button
+        className="close-btn center"
+        onClick={() => setWindows({
+         ...windows,
+         glasshouse: {
+          minimise: false,
+          close: true
+         }
+        })}
+       >&times;</button>
+      </span>
      </span>
-    </span>
-    <span className="window-body">
-     <h1>Hello World</h1>
-    </span>
-   </div>
-  </Draggable >
+     <span className="window-body">
+      <div className="url rev-border">
+       <a
+        href="https://github.com/jmhar3/DreamJournal_app/tree/master"
+        target="_blank"
+       >
+        <h4>jmhar3.github.io/glasshouse</h4>
+       </a>
+      </div>
+      <div className="browser rev-border">
+       <iframe src="https://jmhar3.github.io/glasshouse/"/>
+      </div>
+     </span>
+    </ResizableBox>
+   </Draggable >
  )
 }
 

@@ -33,7 +33,17 @@ const DreamJournal = ({ windows, setWindows }) => {
      </span>
     </span>
     <span className="window-body">
-     <h1>Hello World</h1>
+     <div className="url rev-border">
+      <a
+       href="https://github.com/jmhar3/DreamJournal_app/tree/master"
+       target="_blank"
+      >
+       <h4>dreamjournal.com</h4>
+      </a>
+     </div>
+      <div className="browser rev-border">
+       <iframe src="https://github.com/jmhar3/DreamJournal_app/tree/master"/>
+      </div>
     </span>
    </div>
   </Draggable >

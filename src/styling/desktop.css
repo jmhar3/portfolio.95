@@ -130,6 +130,8 @@ input[type=range]:focus::-ms-fill-upper {
  background: rgb(205, 239, 255);
 }
 
+/* Windows/Desktop */
+
 #desktop {
  position: absolute;
  z-index: 999;
@@ -259,6 +261,27 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
 
 .skills {
  justify-content: center;
+}
+
+/* Projects */
+
+.url {
+ margin: 3px;
+ padding: 6px;
+}
+
+.url h4 {
+ text-align: left;
+ margin: 0;
+}
+
+.browser {
+ margin: 3px;
+}
+
+iframe {
+ width: 60vw;
+ height: 60vh;
 }
 
 /* Music Player */
