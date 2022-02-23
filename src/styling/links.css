@@ -12,7 +12,6 @@
 
 .container {
  overflow: auto;
- text-align: center;
  padding: 3px;
 }
 
@@ -24,24 +23,15 @@
  border: 2px dotted #55036b;   
 }
 
-#links img, #projects img {
+#links img, #links img:hover {
  width: 39px;
  height: 39px;
- border: none;
- padding: 0;
-}
-
-#links img:hover, #projects img:hover {
- width: 39px;
- height: 39px;
- border: none;
 }
 
 #links p, #projects p {
  margin: 0;
  font-size: 16px;
  padding-top: .3em;
- text-align: center;
 }
 
 #projects .container {
@@ -53,4 +43,9 @@
  margin-top: 3px;
  gap: 12px;
  padding: 12px;
+}
+
+#projects img, #projects img:hover {
+ width: 45px;
+ height: 45px;
 }

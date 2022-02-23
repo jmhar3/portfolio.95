@@ -1,12 +1,16 @@
-@media (prefers-color-scheme: dark) {
- body {
- background: #0e0133;
+@media not screen
+and (max-device-height : 900px) 
+and (max-device-width : 1200px) {
+ @media (prefers-color-scheme: dark) {
+  body {
+  background: #0e0133;
+  }
  }
-}
 
-@media (prefers-color-scheme: light) {
- body {
-  background: #fcfbff;
+ @media (prefers-color-scheme: light) {
+  body {
+   background: #fcfbff;
+  }
  }
 }
 
@@ -225,7 +229,7 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
 
 /* Profile */
 
-.about, .skills, .education {
+.about, .skills, .education, .work {
  margin: 9px;
  box-shadow: none;
 }

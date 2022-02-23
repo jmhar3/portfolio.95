@@ -31,7 +31,7 @@ function App() {
  })
 
  return (
-  <BrowserRouter>
+  <BrowserRouter basename='/portfolio.95'>
    {isMobile ?
    <Routes>
     <Route path="/" element={<Mobile />} />

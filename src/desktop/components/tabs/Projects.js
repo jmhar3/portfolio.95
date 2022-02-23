@@ -1,5 +1,5 @@
 import notebook from '../../../images/notebook.png';
-import mail from '../../../images/email.png';
+import globe from '../../../images/globe.png';
 import computer from '../../../images/computer.png';
 
 const Projects = ({ windows, setWindows }) => {
@@ -15,7 +15,7 @@ const Projects = ({ windows, setWindows }) => {
      }
     })}
    >
-    <img src={computer} />
+    <img src={notebook} />
     <p class="hover_icon">DreamJournal</p>
    </div>
    <div
@@ -29,7 +29,7 @@ const Projects = ({ windows, setWindows }) => {
      }
     })}
    >
-    <img src={notebook} />
+    <img src={computer} />
     <p class="hover_icon">Glasshouse</p>
    </div>
    <div
@@ -42,7 +42,7 @@ const Projects = ({ windows, setWindows }) => {
      }
     })}
    >
-    <img src={mail} />
+    <img src={globe} />
     <p class="hover_icon">Apocalypto</p>
    </div>
   </span>
