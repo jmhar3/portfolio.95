@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import message from '../../images/coding.png';
+import message from '../images/coding.png';
 import { useNavigate } from "react-router-dom";
-import '../../styling/mobile.css';
-import Clouds from '../../background/Clouds.js';
-import Stars from '../../background/Stars.js';
+import Clouds from '../background/Clouds.js';
+import Stars from '../background/Stars.js';
 
 const Mobile = () => {
  const [date, setDate] = useState(new Date());

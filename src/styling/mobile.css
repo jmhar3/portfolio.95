@@ -1,3 +1,6 @@
+@media only screen
+and (max-device-height : 900px) 
+and (max-device-width : 1200px) {
 /* Typography */
 
 h1, h2, h3, h4, h5, p, a, li, div, button, span {
@@ -424,4 +427,5 @@ body {
  width: 26px;
  background-color: #070127;
  border-bottom-right-radius: 10px;
+}
 }

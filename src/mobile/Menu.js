@@ -1,21 +1,20 @@
 import { useState } from 'react';
-import '../../styling/mobile.css';
-import '../../styling/links.css';
-import about from '../../images/id-card.png';
-import skills from '../../images/brain.png';
-import education from '../../images/ai.png';
-import work from '../../images/cpu.png';
-import projects from '../../images/city.png';
-import music from '../../images/cd.png';
-import github from '../../images/malware.png';
-import blog from '../../images/hacker.png';
-import email from '../../images/circuit.png';
-import dreamJournal from '../../images/coding.png';
-import glassHouse from '../../images/machine.png';
-import apocalypto from '../../images/sword.png';
+import '../styling/links.css';
+import about from '../images/id-card.png';
+import skills from '../images/brain.png';
+import education from '../images/ai.png';
+import work from '../images/cpu.png';
+import projects from '../images/city.png';
+import music from '../images/cd.png';
+import github from '../images/malware.png';
+import blog from '../images/hacker.png';
+import email from '../images/circuit.png';
+import dreamJournal from '../images/coding.png';
+import glassHouse from '../images/machine.png';
+import apocalypto from '../images/sword.png';
 import { Link } from "react-router-dom";
-import Clouds from '../../background/Clouds.js';
-import Stars from '../../background/Stars.js';
+import Clouds from '../background/Clouds.js';
+import Stars from '../background/Stars.js';
 
 const Desktop = () => {
  const [muted, setMuted] = useState(false)

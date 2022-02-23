@@ -50,7 +50,7 @@ const Header = ({
 
  return (
   <div className="nav">
-   <span className="row">
+   <span className="row dropdowns">
     <ul
      className={`${!startMenu && "hidden"} border start-menu`}
     >

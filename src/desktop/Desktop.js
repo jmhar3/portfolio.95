@@ -8,9 +8,6 @@ import Music from './components/windows/Music';
 import MineSweeper from './components/windows/MineSweeper';
 import Header from './components/Header.js';
 import { useState } from 'react';
-import '../styling/desktop.css';
-import '../styling/header.css';
-import '../styling/links.css';
 
 const Desktop = ({isMobile}) => {
  const [muted, setMuted] = useState(false)

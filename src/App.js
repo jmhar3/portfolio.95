@@ -1,6 +1,6 @@
 import Desktop from './desktop/Desktop';
-import Mobile from './mobile/pages/Mobile';
-import Menu from './mobile/pages/Menu';
+import Mobile from './mobile/Mobile';
+import Menu from './mobile/Menu';
 import About from './mobile/pages/About';
 import Education from './mobile/pages/Education';
 import Music from './mobile/pages/Music';
@@ -16,9 +16,13 @@ import {
  Route
 } from "react-router-dom";
 import './App.css';
+import './styling/desktop.css';
+import './styling/header.css';
+import './styling/links.css';
+import './styling/mobile.css';
 
 function App() {
- const [isMobile, setIsMobile] = useState(true);
+ const [isMobile, setIsMobile] = useState(false);
 
  useEffect(() => {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

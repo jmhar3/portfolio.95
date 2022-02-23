@@ -6,7 +6,6 @@ import play from '../../images/play.png';
 import pause from '../../images/pause.png';
 import speed from '../../images/speed.png';
 import mute from '../../images/heart.png';
-import '../../styling/mobile.css';
 
 const Music = ({ windows, setWindows, muted }) => {
  const [playing, setPlaying] = useState(true);
