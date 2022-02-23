@@ -6,11 +6,14 @@
  left: 18px;
 }
 
+#links .container {
+ margin-bottom: 12px;
+}
+
 .container {
  overflow: auto;
  text-align: center;
  padding: 3px;
- margin-bottom: 3vh;
 }
 
 .container {
@@ -21,22 +24,33 @@
  border: 2px dotted #55036b;   
 }
 
-#links img {
- width: 6.9vh;
- height: 6.9vh;
+#links img, #projects img {
+ width: 39px;
+ height: 39px;
  border: none;
  padding: 0;
 }
 
-#links img:hover {
- width: 6.9vh;
- height: 6.9vh;
+#links img:hover, #projects img:hover {
+ width: 39px;
+ height: 39px;
  border: none;
 }
 
-#links p {
+#links p, #projects p {
  margin: 0;
- font-size: 3vh;
+ font-size: 16px;
  padding-top: .3em;
-text-align: center;
+ text-align: center;
+}
+
+#projects .container {
+ overflow: hidden;
+ width: 90px;
+}
+
+#projects {
+ margin-top: 3px;
+ gap: 12px;
+ padding: 12px;
 }

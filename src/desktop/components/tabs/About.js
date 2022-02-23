@@ -10,7 +10,7 @@ const About = () => {
      <h5>Software Engineer + UI Designer</h5>
     </span>
    </span>
-  <div className="border">
+  <div className="rev-border">
    <p>From the moment I started learning to code I was drawn to the possibilities these skills opened up to me. I'm so fascinated
     with being able to create anything I put my mind to. Although I'm just getting started, I love constantly improving and growing
     my skills, regularly seeking extra challenges so I can learn and grow even more. I don't like setting my

@@ -1,8 +1,22 @@
 const Work = () => {
  return (
-  <span className="work">
-   <p>I'm a Software Developer and UI designer currently working at HealthAide. When I'm not hard at work I'm cuddling with my dog, playing video games or (more often than not) a bit of both. In my off time I enjoy building and creating in many ways, from Lego and puzzles to coding my own fun little projects.</p>
-  </span>
+  <table className="work">
+   <tr>
+    <th>Title</th>
+    <th>Company</th>
+    <th>Date</th>
+   </tr>
+   <tr>
+    <td>Software Developer</td>
+    <td>HealthAide</td>
+    <td>Jan '22 - Feb '22</td>
+   </tr>
+   <tr>
+    <td>Self Employed</td>
+    <td>Lurey</td>
+    <td>Jul '15 - Dec '21</td>
+   </tr>
+  </table>
  )
 }
 
