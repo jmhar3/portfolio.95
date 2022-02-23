@@ -32,8 +32,10 @@ const Header = ({
    return hour + 12
   } else if (hour < 12) {
    return hour
-  } else if (hour > 11) {
+  } else if (hour > 12) {
    return hour - 12
+  } else {
+   return hour
   }
  }
 

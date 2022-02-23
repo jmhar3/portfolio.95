@@ -140,9 +140,8 @@ input[type=range]:focus::-ms-fill-upper {
  padding: 3px;
  background-color: rgb(246, 236, 255);
  position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%,-50%);
+ /* top: 50vh;
+ left: 50vw; */
 }
 
 .window-header {
@@ -209,11 +208,6 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
  padding: 0 15px;
 }
 
-table {
- padding-top: 3px;
- margin: 0 9px 9px 9px;
-}
-
 #profile p {
  width: 390px;
 }
@@ -224,6 +218,46 @@ table {
 
 .intro h4 {
  padding-left: 15px;
+}
+
+/* Profile */
+
+.about, .skills, .education {
+ margin: 9px;
+ box-shadow: none;
+}
+
+.skills {
+ margin: auto;
+ margin-top: 9px;
+ margin-bottom: 9px;
+}
+
+.about .row {
+ margin: 12px 9px;
+ justify-content: flex-start;
+}
+
+.about img {
+ width: 39px;
+ height: 39px;
+}
+
+.about h4, .about h5 {
+ text-align: left;
+ margin: 3px 0 3px 18px;
+}
+
+.about h5 {
+ font-weight: 500;
+}
+
+.about br {
+ height: 9px;
+}
+
+.skills {
+ justify-content: center;
 }
 
 /* Music Player */

@@ -3,7 +3,6 @@ import About from '../tabs/About';
 import Skills from '../tabs/Skills';
 import Education from '../tabs/Education';
 import Work from '../tabs/Work';
-import Projects from '../tabs/Projects';
 
 const Profile = ({ windows, setWindows, tabs, setTabs }) => {
  return (
@@ -47,8 +46,7 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
         about: true,
         skills: false,
         education: false,
-        work: false,
-        projects: false
+        work: false
        })}
       >
        About
@@ -59,8 +57,7 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
         about: false,
         skills: true,
         education: false,
-        work: false,
-        projects: false
+        work: false
        })}
       >
        Skills
@@ -71,8 +68,7 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
         about: false,
         skills: false,
         education: true,
-        work: false,
-        projects: false
+        work: false
        })}
       >
        Education
@@ -83,23 +79,10 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
         about: false,
         skills: false,
         education: false,
-        work: true,
-        projects: false
+        work: true
        })}
       >
        Work
-      </li>
-      <li
-       className={`tab ${tabs.projects && "selected-tab"}`}
-       onClick={() => setTabs({
-        about: false,
-        skills: false,
-        education: false,
-        work: false,
-        projects: true
-       })}
-      >
-       Projects
       </li>
      </ul>
     <span className="window-body">
@@ -107,7 +90,6 @@ const Profile = ({ windows, setWindows, tabs, setTabs }) => {
      {tabs.skills && <Skills/>}
      {tabs.education && <Education/>}
      {tabs.work && <Work/>}
-     {tabs.projects && <Projects/>}
     </span>
    </div>
   </Draggable>

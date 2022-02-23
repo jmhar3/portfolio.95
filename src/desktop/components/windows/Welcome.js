@@ -39,7 +39,7 @@ const Welcome = ({ windows, setWindows, setTabs }) => {
       <span className="column">
        <h4><Typewriter
         onInit={(typewriter) => {
-         typewriter.typeString("Hi, my name's Jessica Harriman")
+         typewriter.typeString("Hi, my name's Jessica")
           .start();
         }}
        /></h4>

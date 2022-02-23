@@ -34,8 +34,7 @@ const Desktop = ({isMobile}) => {
   about: true,
   skills: false,
   education: false,
-  work: false,
-  projects: false
+  work: false
  })
 
  return (
