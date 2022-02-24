@@ -134,6 +134,36 @@ input[type=range]:focus::-ms-fill-upper {
  background: rgb(205, 239, 255);
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+ width: 12px;
+}
+
+::-webkit-scrollbar-track {
+ border-left: 2px solid #55036b;
+ border-top: 2px solid #55036b;
+ border-right: 2px solid #fff;
+ border-bottom: 2px solid #fff;
+ background: rgb(246, 236, 255);
+}
+
+::-webkit-scrollbar-thumb {
+ border-left: 2px solid #fff;
+ border-top: 2px solid #fff;
+ border-right: 2px solid #55036b;
+ border-bottom: 2px solid #55036b;
+ box-shadow: -2px -2px #cb98d8 inset;
+ background-color: rgb(246, 236, 255);
+ outline: none;
+ box-shadow: -2px -2px #cb98d8 inset;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ box-shadow: none;
+ cursor: url('../images/hover cursor.png'), auto;
+}
+
 /* Toastify */
 
 .Toastify h4, .Toastify h5 {
@@ -168,9 +198,6 @@ input[type=range]:focus::-ms-fill-upper {
  padding: 1.5px 3px;
  transition: box-shadow .5s;
 }
-
-/* .Toastify__close-button--default {
-} */
 
 .Toastify .Toastify__close-button > svg {
  fill: #55036b;
@@ -253,6 +280,10 @@ input[type=range]:focus::-ms-fill-upper {
  box-shadow: -2px 0px #cb98d8 inset;
 }
 
+.tab:hover {
+ box-shadow: none;
+}
+
 .selected-tab {
  border-bottom: 2px solid rgb(246, 236, 255);
  box-shadow: none;
@@ -284,41 +315,43 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
 
 /* Profile */
 
-.about, .skills, .education, .work {
+#about, #skills, #education, #work {
  margin: 9px;
  box-shadow: none;
 }
 
-.skills {
+#skills {
  margin: auto;
  margin-top: 9px;
  margin-bottom: 9px;
 }
 
-.about .row {
+#about .row {
  margin: 12px 9px;
  justify-content: flex-start;
 }
 
-.about img {
+#about img {
  width: 39px;
  height: 39px;
 }
 
-.about h4, .about h5 {
+#about h4, #about h5 {
  text-align: left;
  margin: 3px 0 3px 18px;
 }
 
-.about h5 {
+#about h5 {
  font-weight: 500;
 }
 
-.about div {
+#about div {
+ max-height: 51vh;
  padding: 0 5px;
+ overflow-y: auto;
 }
 
-.skills {
+#skills {
  justify-content: center;
 }
 

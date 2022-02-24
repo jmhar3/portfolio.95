@@ -1,6 +1,6 @@
 const Work = () => {
  return (
-  <table className="work">
+  <table id="work">
    <tr>
     <th>Title</th>
     <th>Company</th>

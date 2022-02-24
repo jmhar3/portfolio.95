@@ -119,6 +119,7 @@ const Profile = ({
       <Projects
       windows={windows}
       setWindows={setWindows}
+      setBringToFront={setBringToFront}
       />}
     </span>
    </div>

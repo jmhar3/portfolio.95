@@ -12,7 +12,7 @@ const Skills = () => {
   ["Express", "180 KB", "Back End"]
  ]
  return (
-  <table className="skills">
+  <table id="skills">
   <tr>
     <th>Name</th>
     <th>Size</th>
