@@ -1,11 +1,13 @@
 import Draggable from 'react-draggable';
+import apocalypto from '../../../images/apocalypto.jpg';
 
-const Apocalypto = ({ windows, setWindows }) => {
+const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  return (
   <Draggable handle=".apocalypto">
    <div
-    className={`window border ${windows.apocalypto.minimise && "hidden"}`}
+    className={`window border ${windows.apocalypto.minimise && "hidden"} ${(bringToFront === "apocalypto") && "bring-to-front"}`}
     id="apocalypto"
+    onClick={() => setBringToFront("apocalypto")}
    >
     <span className="window-header row apocalypto">
      <h4>APOCALYPTO</h4>
@@ -38,11 +40,12 @@ const Apocalypto = ({ windows, setWindows }) => {
        href="https://github.com/jmhar3/apocalypto"
        target="_blank"
       >
-       <h4>apocalypto.com</h4>
+       <h4>github.com/jmhar3/apocalypto</h4>
       </a>
      </div>
      <div className="browser rev-border">
-       <iframe src="https://github.com/jmhar3/apocalypto"/>
+       {/* <iframe src="https://github.com/jmhar3/apocalypto"/> */}
+       <img src={apocalypto}/>
      </div>
     </span>
    </div>

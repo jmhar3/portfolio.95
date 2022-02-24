@@ -5,12 +5,20 @@ import Education from '../tabs/Education';
 import Work from '../tabs/Work';
 import Projects from '../tabs/Projects';
 
-const Profile = ({ windows, setWindows, tabs, setTabs }) => {
+const Profile = ({
+ windows,
+ setWindows,
+ tabs,
+ setTabs,
+ bringToFront,
+ setBringToFront
+}) => {
  return (
   <Draggable handle=".profile">
    <div
-    className={`window border ${windows.profile.minimise && "hidden"}`}
+    className={`window border ${windows.profile.minimise && "hidden"} ${(bringToFront === "profile") && "bring-to-front"}`}
     id="profile"
+    onClick={() => setBringToFront("profile")}
    >
     <span className="window-header row profile">
      <h4>PROFILE</h4>

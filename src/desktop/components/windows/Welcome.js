@@ -1,12 +1,19 @@
 import Draggable from 'react-draggable';
 import Typewriter from 'typewriter-effect';
 
-const Welcome = ({ windows, setWindows, setTabs }) => {
+const Welcome = ({
+ windows,
+ setWindows,
+ setTabs,
+ bringToFront,
+ setBringToFront
+}) => {
  return (
   <Draggable handle=".welcome">
    <div
-    className={`window border ${windows.welcome.minimise && "hidden"}`}
+    className={`window border ${windows.welcome.minimise && "hidden"} ${(bringToFront === "welcome") && "bring-to-front"}`}
     id="welcome"
+    onClick={() => setBringToFront("welcome")}
    >
     <span className="window-header row welcome">
      <h4>WELCOME</h4>

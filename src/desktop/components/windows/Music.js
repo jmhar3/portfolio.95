@@ -7,7 +7,13 @@ import pause from '../../../images/pause.png';
 import speed from '../../../images/speed.png';
 import mute from '../../../images/heart.png';
 
-const Music = ({ windows, setWindows, muted }) => {
+const Music = ({
+ windows,
+ setWindows,
+ muted,
+ bringToFront,
+ setBringToFront
+}) => {
  const [playing, setPlaying] = useState(true);
  const [duration, setDuration] = useState(3.41);
  const [current, setCurrent] = useState(2.18);
@@ -17,8 +23,9 @@ const Music = ({ windows, setWindows, muted }) => {
  return (
   <Draggable handle=".music">
    <div
-    className={`window border ${windows.music.minimise && "hidden"}`}
+    className={`window border ${windows.music.minimise && "hidden"} ${(bringToFront === "music") && "bring-to-front"}`}
     id="music"
+    onClick={() => setBringToFront("music")}
    >
     <span className="window-header row music">
      <h4>MUSIC PLAYER</h4>

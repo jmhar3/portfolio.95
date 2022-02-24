@@ -2,12 +2,13 @@ import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
 import { useState } from 'react';
 
-const Glasshouse = ({ windows, setWindows }) => {
+const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  return (
    <Draggable handle=".glasshouse">
     <ResizableBox
-     className={`window border ${windows.glasshouse.minimise && "hidden"}`}
+     className={`window border ${windows.glasshouse.minimise && "hidden"}  ${(bringToFront === "glasshouse") && "bring-to-front"}`}
      id="glasshouse"
+     onClick={() => setBringToFront("glasshouse")}
     >
      <span className="window-header row glasshouse">
       <h4>GLASSHOUSE</h4>

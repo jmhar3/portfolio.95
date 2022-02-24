@@ -6,7 +6,12 @@ import Cell from '../minesweeper/Cell';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const MineSweeper = ({ windows, setWindows }) => {
+const MineSweeper = ({
+ windows,
+ setWindows,
+ bringToFront,
+ setBringToFront
+}) => {
  const [gameOver, setGameOver] = useState(false);
  const [grid, setGrid] = useState([]);
  const [nonMinecount, setNonMinecount] = useState(0);
@@ -97,8 +102,9 @@ const MineSweeper = ({ windows, setWindows }) => {
  return (
   <Draggable handle=".minesweeper">
    <div
-    className={`window border ${windows.minesweeper.minimise && "hidden"}`}
+    className={`window border ${windows.minesweeper.minimise && "hidden"} ${(bringToFront === "minesweeper") && "bring-to-front"}`}
     id="minesweeper"
+    onClick={() => setBringToFront("minesweeper")}
    >
     <span className="window-header row minesweeper">
      <h4>MINESWEEPER</h4>

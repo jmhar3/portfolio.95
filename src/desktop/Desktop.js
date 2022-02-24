@@ -13,7 +13,8 @@ import Header from './components/Header.js';
 import { useState } from 'react';
 
 const Desktop = ({ isMobile }) => {
- const [muted, setMuted] = useState(false)
+ const [muted, setMuted] = useState(false);
+ const [bringToFront, setBringToFront] = useState("welcome");
  const [windows, setWindows] = useState({
   welcome: {
    minimise: false,
@@ -61,6 +62,8 @@ const Desktop = ({ isMobile }) => {
      <Welcome
       windows={windows}
       setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
      />}
     {!windows.profile.close &&
      <Profile
@@ -68,21 +71,29 @@ const Desktop = ({ isMobile }) => {
       setWindows={setWindows}
       tabs={tabs}
       setTabs={setTabs}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
      />}
     {!windows.dreamjournal.close &&
      <DreamJournal
       windows={windows}
       setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
      />}
     {!windows.glasshouse.close &&
      <Glasshouse
       windows={windows}
       setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
      />}
     {!windows.apocalypto.close &&
      <Apocalypto
       windows={windows}
       setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
      />}
     {/* {!windows.music.close &&
      <Music
@@ -95,6 +106,8 @@ const Desktop = ({ isMobile }) => {
      <MineSweeper
       windows={windows}
       setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
      />}
     <Header
      windows={windows}
@@ -102,6 +115,7 @@ const Desktop = ({ isMobile }) => {
      muted={muted}
      setMuted={setMuted}
      setTabs={setTabs}
+     setBringToFront={setBringToFront}
     />
    </div>
 
