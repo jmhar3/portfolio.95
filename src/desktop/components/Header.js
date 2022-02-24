@@ -421,7 +421,7 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-         setBringToFront("minesweepr")
+         setBringToFront("minesweeper")
          setWindows({
          ...windows,
          minesweeper: {

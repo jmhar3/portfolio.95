@@ -6,9 +6,7 @@ export default function Cell({
  revealcell,
  handleStart,
  isFreshBoard,
- setIsFreshBoard,
- mineCount,
- setMineCount
+ setIsFreshBoard
 }) {
  const style = {
   cellStyle: {

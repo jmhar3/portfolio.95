@@ -80,9 +80,8 @@ const MineSweeper = ({
    }
    setGrid(newGrid);
    setGameOver(true);
-   handleStop();
   }
-  if (mineCount == 0) {
+  if (mineCount === 0) {
    // WINNER WINNER CHICKEN DINNER
    handleStop();
    toast(
