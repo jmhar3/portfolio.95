@@ -20,6 +20,7 @@ import './styling/desktop.css';
 import './styling/header.css';
 import './styling/links.css';
 import './styling/mobile.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
  const [isMobile, setIsMobile] = useState(false);
@@ -32,6 +33,13 @@ function App() {
 
  return (
   <BrowserRouter basename='/portfolio.95'>
+  <ToastContainer
+   closeOnClick={true}
+   draggable={false}
+   hideProgressBar={true}
+   position="top-center"
+   autoClose={500000000}
+  />
    {isMobile ?
    <Routes>
     <Route path="/" element={<Mobile />} />

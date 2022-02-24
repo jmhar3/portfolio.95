@@ -134,6 +134,57 @@ input[type=range]:focus::-ms-fill-upper {
  background: rgb(205, 239, 255);
 }
 
+/* Toastify */
+
+.Toastify h4, .Toastify h5 {
+ margin: 9px;
+ width: 240px;
+}
+
+.Toastify .Toastify__toast-theme--light {
+ border-left: 2px solid #55036b;
+ border-top: 2px solid #55036b;
+ border-right: 2px solid #fff;
+ border-bottom: 2px solid #fff;
+ box-shadow: none;
+ border-radius: 0;
+ background: rgb(246, 236, 255);
+}
+
+.Toastify .Toastify__close-button {
+ /* border: none;
+ background-color: rgb(246, 236, 255);
+ box-shadow: none; */
+ position: relative;
+ right: 3px;
+ border-left: 2px solid #fff;
+ border-top: 2px solid #fff;
+ border-right: 2px solid #55036b;
+ border-bottom: 2px solid #55036b;
+ box-shadow: -2px -2px #cb98d8 inset;
+ background-color: rgb(246, 236, 255);
+ outline: none;
+ box-shadow: -2px -2px #cb98d8 inset;
+ padding: 1.5px 3px;
+ transition: box-shadow .5s;
+}
+
+/* .Toastify__close-button--default {
+} */
+
+.Toastify .Toastify__close-button > svg {
+ fill: #55036b;
+}
+
+.Toastify .Toastify__close-button--light {
+ opacity: 1;
+}
+
+.Toastify__close-button:hover, .Toastify__close-button:focus {
+ box-shadow: none;
+ transition: box-shadow .5s;
+}
+
 /* Windows/Desktop */
 
 #desktop {

@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import CreateBoard from '../minesweeper/CreateBoard';
 import { revealed } from "../minesweeper/Reveal";
 import Cell from '../minesweeper/Cell';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MineSweeper = ({ windows, setWindows }) => {
  const [gameOver, setGameOver] = useState(false);
@@ -25,7 +27,7 @@ const MineSweeper = ({ windows, setWindows }) => {
  const handleStop = () => {
   clearInterval(countRef.current)
   setIsActive(false)
-}
+ }
 
  const counterValue = (num) => {
   if (num.length === 1) {
@@ -49,7 +51,6 @@ const MineSweeper = ({ windows, setWindows }) => {
 
  const freshBoard = () => {
   const newBoard = CreateBoard(9, 9, 10);
-  setNonMinecount(9 * 9 - 10);
   setmineLocation(newBoard.mineLocation);
   setGrid(newBoard.board);
   setIsFreshBoard(true);
@@ -75,12 +76,16 @@ const MineSweeper = ({ windows, setWindows }) => {
    setGrid(newGrid);
    setGameOver(true);
    handleStop();
-   // setTimeout(newfresh, 500);
   }
-  if (nonMinecount === 0) {
+  if (mineCount == 0) {
    // WINNER WINNER CHICKEN DINNER
    handleStop();
-   // setTimeout(newfresh, 500);
+   toast(
+    <div className="center column">
+     <h4>YOU WIN!</h4>
+     <h5>Congratulations on winning MineSweeper!</h5>
+    </div>
+   )
   }
   else {
    let revealedboard = revealed(newGrid, x, y, nonMinecount);
@@ -140,28 +145,28 @@ const MineSweeper = ({ windows, setWindows }) => {
       <h2 className="counter">{counterValue(timer.toString())}</h2>
      </span>
      <span className="ms-body">
-   <div className="rev-border">
-    {grid.map((singlerow, index1) => {
-     return (
-      <div style={style} key={index1}>
-       {singlerow.map((singlecol, index2) => {
-        return <Cell
-         details={singlecol}
-         key={index2}
-         updateFlag={updateFlag}
-         revealcell={revealcell}
-         handleStart={handleStart}
-         isFreshBoard={isFreshBoard}
-         setIsFreshBoard={setIsFreshBoard}
-         mineCount={mineCount}
-         setMineCount={setMineCount}
-        />
-       })}
+      <div className="rev-border">
+       {grid.map((singlerow, index1) => {
+        return (
+         <div style={style} key={index1}>
+          {singlerow.map((singlecol, index2) => {
+           return <Cell
+            details={singlecol}
+            key={index2}
+            updateFlag={updateFlag}
+            revealcell={revealcell}
+            handleStart={handleStart}
+            isFreshBoard={isFreshBoard}
+            setIsFreshBoard={setIsFreshBoard}
+            mineCount={mineCount}
+            setMineCount={setMineCount}
+           />
+          })}
 
+         </div>
+        )
+       })}
       </div>
-     )
-    })}
-   </div>
      </span>
     </span>
    </div>
