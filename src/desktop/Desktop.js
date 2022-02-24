@@ -84,13 +84,13 @@ const Desktop = ({ isMobile }) => {
       windows={windows}
       setWindows={setWindows}
      />}
-    {!windows.music.close &&
+    {/* {!windows.music.close &&
      <Music
       windows={windows}
       setWindows={setWindows}
       muted={muted}
       setMuted={setMuted}
-     />}
+     />} */}
     {!windows.minesweeper.close &&
      <MineSweeper
       windows={windows}

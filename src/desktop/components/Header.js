@@ -69,7 +69,7 @@ const Header = ({
       ►
      </li>
 
-     <li
+     {/* <li
       className="row center"
       onMouseEnter={() => {
        setAboutMenu(false)
@@ -80,6 +80,25 @@ const Header = ({
        Programs
       </span>
       ►
+     </li> */}
+
+     <li
+      className="row center clickable"
+      onClick={() => {
+       setStartMenu(false)
+       setWindows({
+        ...windows,
+        minesweeper: {
+         minimise: false,
+         close: false
+        }
+       })
+      }}
+     >
+     <span className="row center">
+      <img src={computer} />
+      MineSweeper
+     </span>
      </li>
 
      <li
@@ -230,7 +249,7 @@ const Header = ({
      className={`${!programsMenu && "remove"} border clickable`}
      onMouseLeave={() => setProgramsMenu(false)}
     >
-     <li
+     {/* <li
       onClick={() => {
        setStartMenu(false)
        setProgramsMenu(false)
@@ -244,12 +263,12 @@ const Header = ({
       }}
      >
       Music Player
-     </li>
+     </li> */}
 
      <li
       className="row center clickable"
+      onMouseEnter={() => setAboutMenu(false)}
       onClick={() => {
-       setProgramsMenu(false)
        setStartMenu(false)
        setWindows({
         ...windows,
@@ -362,7 +381,7 @@ const Header = ({
         Apocalypto
        </button>}
 
-      {!windows.music.close &&
+      {/* {!windows.music.close &&
        <button
         className="border"
         onClick={() => setWindows({
@@ -374,7 +393,7 @@ const Header = ({
         })}
        >
         Music Player
-       </button>}
+       </button>} */}
 
       {!windows.minesweeper.close &&
        <button
@@ -393,11 +412,11 @@ const Header = ({
     </navbar>
 
     <span className="rev-border clock center row">
-     <img
+     {/* <img
       src={logo}
       onClick={() => setMuted(!muted)}
       className="clickable mute"
-     />
+     /> */}
      {`${hour}:${minute}PM`}
     </span>
    </nav>
