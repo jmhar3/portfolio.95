@@ -119,7 +119,7 @@ const Desktop = () => {
     <ul className="row projects">
      <li className="icon center">
       <a
-       href="https://github.com/jmhar3"
+       href="https://github.com/jmhar3/DreamJournal_app/tree/master"
        target="_blank"
       >
        <img src={dreamJournal} />
@@ -128,7 +128,7 @@ const Desktop = () => {
      </li>
      <li className="icon center">
       <a
-       href="https://github.com/jmhar3"
+       href="https://github.com/jmhar3/glasshouse"
        target="_blank"
       >
        <img src={glassHouse} />
@@ -137,7 +137,7 @@ const Desktop = () => {
      </li>
      <li className="icon center">
       <a
-       href="https://github.com/jmhar3"
+       href="https://github.com/jmhar3/apocalypto"
        target="_blank"
       >
        <img src={apocalypto} />

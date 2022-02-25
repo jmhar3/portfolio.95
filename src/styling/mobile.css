@@ -1,6 +1,9 @@
 @media only screen
 and (max-device-height : 900px) 
 and (max-device-width : 1200px) {
+:root {
+ --highlight: rgb(202, 138, 198); 
+}
 /* Typography */
 
 h1, h2, h3, h4, h5, p, a, li, div, button, span {
@@ -43,7 +46,7 @@ body {
 }
 
 .mobile-header a h2, .mobile-header a h3, #menu h5 {
- color: rgb(116, 32, 111);
+ color: var(--highlight);
 }
 
 .mobile-header h2, .skills h5 {

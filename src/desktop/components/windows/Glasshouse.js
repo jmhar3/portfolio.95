@@ -38,7 +38,7 @@ const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
      <span className="window-body">
       <div className="url rev-border">
        <a
-        href="https://github.com/jmhar3/DreamJournal_app/tree/master"
+        href="https://github.com/jmhar3/glasshouse"
         target="_blank"
        >
         <h4>jmhar3.github.io/glasshouse</h4>

@@ -12,7 +12,6 @@ and (max-device-width : 1200px) {
    background: #fcfbff;
   }
  }
-}
 
 h1, h2, h3, h4, h5, p, li, div, button, span {
  color: #55036b;
@@ -420,7 +419,4 @@ iframe, .browser img {
  background-color: #55036b;
  color: rgb(205, 239, 255);
 }
-
-.ms-body {
- 
 }
