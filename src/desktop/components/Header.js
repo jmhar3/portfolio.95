@@ -31,12 +31,10 @@ const Header = ({
  const calculateHour = (hour) => {
   if (hour === 0) {
    return hour + 12
-  } else if (hour < 12) {
+  } else if (hour <= 12) {
    return hour
   } else if (hour > 12) {
    return hour - 12
-  } else {
-   return hour
   }
  }
 
