@@ -5,6 +5,7 @@ import { revealed } from "../minesweeper/Reveal";
 import Cell from '../minesweeper/Cell';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { randomNumber } from '../../../Helpers';
 
 const MineSweeper = ({
  windows,
@@ -18,9 +19,18 @@ const MineSweeper = ({
  const [mineLocation, setmineLocation] = useState([]);
  const [isFreshBoard, setIsFreshBoard] = useState(true);
  const [mineCount, setMineCount] = useState(10);
+
  const [timer, setTimer] = useState(0);
  const [isActive, setIsActive] = useState(false);
  const countRef = useRef(null);
+ 
+ const [top, setTop] = useState(0);
+ const [left, setLeft] = useState(0);
+
+ useEffect(() => {
+  setTop(randomNumber(10, 30))
+  setLeft(randomNumber(20, 60))
+ }, [])
 
  const handleStart = () => {
   setIsActive(true)
@@ -101,9 +111,14 @@ const MineSweeper = ({
  return (
   <Draggable handle=".minesweeper">
    <div
-    className={`window border ${windows.minesweeper.minimise && "hidden"} ${(bringToFront === "minesweeper") && "bring-to-front"}`}
+    className={
+     `window border
+     ${windows.minesweeper.minimise && "hidden"}
+     ${(bringToFront === "minesweeper") && "bring-to-front"}`
+    }
     id="minesweeper"
     onClick={() => setBringToFront("minesweeper")}
+    style={{ top: `${top}vh`, left: `${left}vw` }}
    >
     <span className="window-header row minesweeper">
      <h4>MINESWEEPER</h4>

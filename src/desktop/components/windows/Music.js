@@ -1,11 +1,12 @@
 import ReactAudioPlayer from 'react-audio-player';
 import Draggable from 'react-draggable';
 import lofi from '../../../music/lofi.ogg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import play from '../../../images/play.png';
 import pause from '../../../images/pause.png';
 import speed from '../../../images/speed.png';
 import mute from '../../../images/heart.png';
+import { randomNumber } from '../../../Helpers';
 
 const Music = ({
  windows,
@@ -17,6 +18,13 @@ const Music = ({
  const [playing, setPlaying] = useState(true);
  const [duration, setDuration] = useState(3.41);
  const [current, setCurrent] = useState(2.18);
+ const [top, setTop] = useState(0);
+ const [left, setLeft] = useState(0);
+
+ useEffect(() => {
+  setTop(randomNumber(10, 30))
+  setLeft(randomNumber(20, 60))
+ }, [])
 
  // const removeDecimal = (value) => value.split(".").join(":")
 
@@ -26,6 +34,7 @@ const Music = ({
     className={`window border ${windows.music.minimise && "hidden"} ${(bringToFront === "music") && "bring-to-front"}`}
     id="music"
     onClick={() => setBringToFront("music")}
+    style={{ top: `${top}vh`, left: `${left}vw` }}
    >
     <span className="window-header row music">
      <h4>MUSIC PLAYER</h4>

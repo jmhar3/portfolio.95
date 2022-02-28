@@ -223,8 +223,6 @@ input[type=range]:focus::-ms-fill-upper {
  padding: 3px;
  background-color: rgb(246, 236, 255);
  position: absolute;
- left: 15vw;
- top: 10vh;
 }
 
 .window-header {

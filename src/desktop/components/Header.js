@@ -22,6 +22,21 @@ const Header = ({
   setDate(new Date());
  }
 
+ // const handleCloseMenus = () => {
+ //  if (!!startMenu) {
+ //   setStartMenu(false);
+ //   setAboutMenu(false);
+ //   setProgramsMenu(false);
+ //  }
+ // } 
+
+ // useEffect(() => {
+ //  document.addEventListener('click', handleCloseMenus)
+ //  return () => {
+ //   document.removeEventListener('click', handleCloseMenus)
+ //  }
+ // }, []);
+
  useEffect(() => {
   const timerId = setInterval(refreshClock, 1000);
   return function cleanup() {
@@ -325,13 +340,13 @@ const Header = ({
         className="border"
         onClick={() => {
          (bringToFront === "welcome" && !windows.welcome.minimise || windows.welcome.minimise) &&
-         setWindows({
-          ...windows,
-          welcome: {
-           minimise: !windows.welcome.minimise,
-           close: false
-          }
-         })
+          setWindows({
+           ...windows,
+           welcome: {
+            minimise: !windows.welcome.minimise,
+            close: false
+           }
+          })
          setBringToFront("welcome")
         }}
        >
@@ -343,13 +358,13 @@ const Header = ({
         className="border"
         onClick={() => {
          (bringToFront === "profile" && !windows.profile.minimise || windows.profile.minimise) &&
-         setWindows({
-          ...windows,
-          profile: {
-           minimise: !windows.profile.minimise,
-           close: false
-          }
-         })
+          setWindows({
+           ...windows,
+           profile: {
+            minimise: !windows.profile.minimise,
+            close: false
+           }
+          })
          setBringToFront("profile")
         }}
        >
@@ -361,13 +376,13 @@ const Header = ({
         className="border"
         onClick={() => {
          (bringToFront === "dreamjournal" && !windows.dreamjournal.minimise || windows.dreamjournal.minimise) &&
-         setWindows({
-          ...windows,
-          dreamjournal: {
-           minimise: !windows.dreamjournal.minimise,
-           close: false
-          }
-         })
+          setWindows({
+           ...windows,
+           dreamjournal: {
+            minimise: !windows.dreamjournal.minimise,
+            close: false
+           }
+          })
          setBringToFront("dreamjournal")
         }}
        >
@@ -379,13 +394,13 @@ const Header = ({
         className="border"
         onClick={() => {
          (bringToFront === "glasshouse" && !windows.glasshouse.minimise || windows.glasshouse.minimise) &&
-         setWindows({
-          ...windows,
-          glasshouse: {
-           minimise: !windows.glasshouse.minimise,
-           close: false
-          }
-         })
+          setWindows({
+           ...windows,
+           glasshouse: {
+            minimise: !windows.glasshouse.minimise,
+            close: false
+           }
+          })
          setBringToFront("glasshouse")
         }}
        >
@@ -397,13 +412,13 @@ const Header = ({
         className="border"
         onClick={() => {
          (bringToFront === "apocalypto" && !windows.apocalypto.minimise || windows.apocalypto.minimise) &&
-         setWindows({
-          ...windows,
-          apocalypto: {
-           minimise: !windows.apocalypto.minimise,
-           close: false
-          }
-         })
+          setWindows({
+           ...windows,
+           apocalypto: {
+            minimise: !windows.apocalypto.minimise,
+            close: false
+           }
+          })
          setBringToFront("apocalypto")
         }}
        >
@@ -433,13 +448,13 @@ const Header = ({
         className="border"
         onClick={() => {
          (bringToFront === "minesweeper" && !windows.minesweeper.minimise || windows.minesweeper.minimise) &&
-         setWindows({
-          ...windows,
-          minesweeper: {
-           minimise: !windows.minesweeper.minimise,
-           close: false
-          }
-         })
+          setWindows({
+           ...windows,
+           minesweeper: {
+            minimise: !windows.minesweeper.minimise,
+            close: false
+           }
+          })
          setBringToFront("minesweeper")
         }}
        >

@@ -1,10 +1,18 @@
 import Draggable from 'react-draggable';
 import apocalypto from '../../../images/apocalypto.jpg';
 import MarqueeBanner from "../MarqueeBanner";
-import { useState } from 'react';
+import { randomNumber } from '../../../Helpers';
+import { useState, useEffect } from 'react';
 
 const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);
+ const [top, setTop] = useState(0);
+ const [left, setLeft] = useState(0);
+
+ useEffect(() => {
+  setTop(randomNumber(3, 6))
+  setLeft(randomNumber(6, 30))
+ }, [])
 
  return (
   <Draggable handle=".apocalypto">
@@ -16,6 +24,7 @@ const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
     }
     id="apocalypto"
     onClick={() => setBringToFront("apocalypto")}
+    style={{top: `${top}vh`, left: `${left}vw`}}
    >
     <header className="window-header row apocalypto">
      <h4>APOCALYPTO</h4>

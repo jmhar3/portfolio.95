@@ -1,10 +1,18 @@
 import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
 import MarqueeBanner from '../MarqueeBanner';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { randomNumber } from '../../../Helpers';
 
 const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);
+ const [top, setTop] = useState(0);
+ const [left, setLeft] = useState(0);
+
+ useEffect(() => {
+  setTop(randomNumber(3, 6))
+  setLeft(randomNumber(6, 30))
+ }, [])
 
  return (
    <Draggable handle=".glasshouse">
@@ -16,6 +24,7 @@ const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
       `}
      id="glasshouse"
      onClick={() => setBringToFront("glasshouse")}
+     style={{top: `${top}vh`, left: `${left}vw`}}
     >
      <span className="window-header row glasshouse">
       <h4>GLASSHOUSE</h4>

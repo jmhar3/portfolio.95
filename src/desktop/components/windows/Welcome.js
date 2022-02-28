@@ -1,5 +1,7 @@
 import Draggable from 'react-draggable';
 import Typewriter from 'typewriter-effect';
+import { useState, useEffect } from 'react';
+import { randomNumber } from '../../../Helpers';
 
 const Welcome = ({
  windows,
@@ -8,12 +10,21 @@ const Welcome = ({
  bringToFront,
  setBringToFront
 }) => {
+ const [top, setTop] = useState(0);
+ const [left, setLeft] = useState(0);
+
+ useEffect(() => {
+  setTop(randomNumber(5, 50))
+  setLeft(randomNumber(15, 60))
+ }, [])
+
  return (
   <Draggable handle=".welcome">
    <div
     className={`window border ${windows.welcome.minimise && "hidden"} ${(bringToFront === "welcome") && "bring-to-front"}`}
     id="welcome"
     onClick={() => setBringToFront("welcome")}
+    style={{ top: `${top}vh`, left: `${left}vw`}}
    >
     <span className="window-header row welcome">
      <h4>WELCOME</h4>
