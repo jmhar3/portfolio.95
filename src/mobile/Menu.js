@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../styling/links.css';
 import about from '../images/id-card.png';
 import skills from '../images/brain.png';
@@ -13,38 +12,9 @@ import dreamJournal from '../images/coding.png';
 import glassHouse from '../images/machine.png';
 import apocalypto from '../images/sword.png';
 import { Link } from "react-router-dom";
-import Clouds from '../background/Clouds.js';
 import Stars from '../background/Stars.js';
 
-const Desktop = () => {
- const [muted, setMuted] = useState(false)
- const [windows, setWindows] = useState({
-  welcome: {
-   minimise: false,
-   close: false
-  },
-  profile: {
-   minimise: false,
-   close: true
-  },
-  music: {
-   minimise: true,
-   close: false
-  },
-  minesweeper: {
-   minimise: false,
-   close: true
-  }
- })
-
- const [tabs, setTabs] = useState({
-  about: true,
-  skills: false,
-  education: false,
-  work: false,
-  projects: false
- })
-
+const Menu = () => {
  return (
   <>
    <nav id="menu" className="center column">
@@ -148,9 +118,8 @@ const Desktop = () => {
    </nav>
 
    <Stars />
-   {/* <Clouds /> */}
   </>
  )
 }
 
-export default Desktop
+export default Menu

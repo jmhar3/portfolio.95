@@ -11,9 +11,9 @@ and (max-device-width : 1200px) {
   body {
    background: #fcfbff;
   }
- }
+ } 
 
-h1, h2, h3, h4, h5, p, li, div, button, span {
+h1, h2, h3, h4, h5, p, li, div, button, span, a {
  color: #55036b;
  text-align: center;
 }
@@ -377,6 +377,14 @@ iframe, .browser img {
 
 .browser img {
  object-fit: cover;
+}
+
+.marquee-container {
+ margin: 0;
+}
+
+.marquee h4 {
+ margin: 9px;
 }
 
 /* Music Player */

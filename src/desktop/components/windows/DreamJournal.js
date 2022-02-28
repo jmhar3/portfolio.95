@@ -1,5 +1,6 @@
 import Draggable from 'react-draggable';
 import dreamJournal from '../../../images/dreamJournal.jpg';
+import MarqueeBanner from '../MarqueeBanner';
 
 const DreamJournal = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  return (
@@ -46,6 +47,7 @@ const DreamJournal = ({ windows, setWindows, bringToFront, setBringToFront }) =>
       <div className="browser rev-border">
        {/* <iframe src="https://github.com/jmhar3/DreamJournal_app/tree/master"/> */}
        <img src={dreamJournal}/>
+      <MarqueeBanner github="https://github.com/jmhar3/DreamJournal_app/tree/master" languages="CSS JavaScript React Ruby Rails PostgreSQL"/>
       </div>
     </span>
    </div>

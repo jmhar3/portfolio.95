@@ -1,6 +1,6 @@
 import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
-import { useState } from 'react';
+import MarqueeBanner from '../MarqueeBanner';
 
 const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  return (
@@ -46,6 +46,7 @@ const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
       </div>
       <div className="browser rev-border">
        <iframe src="https://jmhar3.github.io/glasshouse/"/>
+       <MarqueeBanner github="https://github.com/jmhar3/glasshouse" languages="CSS JavaScript React AWS Firebase" />
       </div>
      </span>
     </ResizableBox>

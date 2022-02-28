@@ -1,5 +1,6 @@
 import Draggable from 'react-draggable';
 import apocalypto from '../../../images/apocalypto.jpg';
+import MarqueeBanner from "../MarqueeBanner";
 
 const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  return (
@@ -9,7 +10,7 @@ const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
     id="apocalypto"
     onClick={() => setBringToFront("apocalypto")}
    >
-    <span className="window-header row apocalypto">
+    <header className="window-header row apocalypto">
      <h4>APOCALYPTO</h4>
      <span className="row window-buttons">
       <button
@@ -33,7 +34,7 @@ const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
        })}
       >&times;</button>
      </span>
-    </span>
+    </header>
     <span className="window-body">
      <div className="url rev-border">
       <a
@@ -44,8 +45,9 @@ const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
       </a>
      </div>
      <div className="browser rev-border">
-       {/* <iframe src="https://github.com/jmhar3/apocalypto"/> */}
-       <img src={apocalypto}/>
+      {/* <iframe src="https://github.com/jmhar3/apocalypto"/> */}
+      <img src={apocalypto} />
+      <MarqueeBanner github="https://github.com/jmhar3/apocalypto" languages="Ruby"/>
      </div>
     </span>
    </div>
