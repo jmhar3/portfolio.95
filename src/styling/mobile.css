@@ -84,6 +84,7 @@ body {
  background: var(--container);
  position: relative;
  z-index: 1;
+ height: 100vh;
 }
 
 /* Lockscreen */
@@ -343,6 +344,34 @@ body {
  margin-top: 4.5vh;
 }
 
+/* About */
+
+.about-heading {
+ padding: 12px;
+ justify-content: flex-start;
+ background-color: var(--background);
+ border-top: 1px solid var(--highlight);
+ border-bottom: 1px solid var(--highlight);
+}
+
+.about-body {
+ padding: 0 12px;
+}
+
+.about img {
+ width: 39px;
+ height: 39px;
+}
+
+.about h4, .about h5 {
+ text-align: left;
+ margin: 3px 0 3px 18px;
+}
+
+.about h5 {
+ font-weight: 500;
+}
+
 /* Skills */
 
 .skills-body {
@@ -375,6 +404,7 @@ body {
 /* Work */
 
 .work ul {
+ border-top: 1px solid var(--highlight);
  background-color: var(--background);
 }
 
