@@ -1,4 +1,3 @@
-import '../../styling/mobile.css';
 import { useSwipeable } from 'react-swipeable';
 import { useNavigate } from 'react-router-dom';
 
