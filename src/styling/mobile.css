@@ -304,6 +304,13 @@ body {
  gap: 6vw;
 }
 
+#menu ul {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 6vw;
+}
+
 /* .projects {
  position: absolute;
  bottom: 0;
@@ -318,10 +325,6 @@ body {
  left: 50%;
  z-index: 1;
 } */
-
-#menu li {
- width: 30vw;
-}
 
 #menu h5 {
  text-align: center;

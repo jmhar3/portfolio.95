@@ -23,7 +23,7 @@ import './styling/mobile.css';
 import { ToastContainer } from 'react-toastify';
 
 function App() {
- const [isMobile, setIsMobile] = useState(true);
+ const [isMobile, setIsMobile] = useState(false);
 
  useEffect(() => {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

@@ -37,28 +37,24 @@ const Menu = () => {
        <h5>Education</h5>
       </Link>
      </li>
-    </ul>
-    <ul className="row">
      <li className="icon center">
       <Link to="/work">
        <img src={work} />
        <h5>Work</h5>
       </Link>
      </li>
-     <li className="icon center">
+     {/* <li className="icon center">
       <Link to="/projects">
        <img src={projects} />
        <h5>Projects</h5>
       </Link>
-     </li>
-     <li className="icon center">
+     </li> */}
+     {/* <li className="icon center">
       <Link to="/music">
        <img src={music} />
        <h5>Music</h5>
       </Link>
-     </li>
-    </ul>
-    <ul className="row">
+     </li> */}
      <li className="icon center">
       <a
        href="https://github.com/jmhar3"
