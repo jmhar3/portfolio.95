@@ -10,6 +10,7 @@ const Header = ({
  setMuted,
  tabs,
  setTabs,
+ bringToFront,
  setBringToFront
 }) => {
  const [startMenu, setStartMenu] = useState(false);
@@ -95,10 +96,10 @@ const Header = ({
        })
       }}
      >
-     <span className="row center">
-      <img src={computer} />
-      MineSweeper
-     </span>
+      <span className="row center">
+       <img src={computer} />
+       MineSweeper
+      </span>
      </li>
 
      <li
@@ -323,14 +324,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-       setBringToFront("welcome")
+         (bringToFront === "welcome" && !windows.welcome.minimise || windows.welcome.minimise) &&
          setWindows({
-         ...windows,
-         welcome: {
-          minimise: !windows.welcome.minimise,
-          close: false
-         }
-        })}}
+          ...windows,
+          welcome: {
+           minimise: !windows.welcome.minimise,
+           close: false
+          }
+         })
+         setBringToFront("welcome")
+        }}
        >
         Welcome
        </button>}
@@ -339,14 +342,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-         setBringToFront("profile")
+         (bringToFront === "profile" && !windows.profile.minimise || windows.profile.minimise) &&
          setWindows({
-         ...windows,
-         profile: {
-          minimise: !windows.profile.minimise,
-          close: false
-         }
-        })}}
+          ...windows,
+          profile: {
+           minimise: !windows.profile.minimise,
+           close: false
+          }
+         })
+         setBringToFront("profile")
+        }}
        >
         Profile
        </button>}
@@ -355,14 +360,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-         setBringToFront("dreamjournal")
+         (bringToFront === "dreamjournal" && !windows.dreamjournal.minimise || windows.dreamjournal.minimise) &&
          setWindows({
-         ...windows,
-         dreamjournal: {
-          minimise: !windows.dreamjournal.minimise,
-          close: false
-         }
-         })}}
+          ...windows,
+          dreamjournal: {
+           minimise: !windows.dreamjournal.minimise,
+           close: false
+          }
+         })
+         setBringToFront("dreamjournal")
+        }}
        >
         DreamJournal
        </button>}
@@ -371,14 +378,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-         setBringToFront("glasshouse")
+         (bringToFront === "glasshouse" && !windows.glasshouse.minimise || windows.glasshouse.minimise) &&
          setWindows({
-         ...windows,
-         glasshouse: {
-          minimise: !windows.glasshouse.minimise,
-          close: false
-         }
-         })}}
+          ...windows,
+          glasshouse: {
+           minimise: !windows.glasshouse.minimise,
+           close: false
+          }
+         })
+         setBringToFront("glasshouse")
+        }}
        >
         Glasshouse
        </button>}
@@ -387,14 +396,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-         setBringToFront("apocalypto")
+         (bringToFront === "apocalypto" && !windows.apocalypto.minimise || windows.apocalypto.minimise) &&
          setWindows({
-         ...windows,
-         apocalypto: {
-          minimise: !windows.apocalypto.minimise,
-          close: false
-         }
-          })}}
+          ...windows,
+          apocalypto: {
+           minimise: !windows.apocalypto.minimise,
+           close: false
+          }
+         })
+         setBringToFront("apocalypto")
+        }}
        >
         Apocalypto
        </button>}
@@ -403,14 +414,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-       setBringToFront("music")
-       setWindows({
-         ...windows,
-         music: {
-          minimise: !windows.music.minimise,
-          close: false
-         }
-        })}}
+         (bringToFront === "music" && !windows.music.minimise || windows.music.minimise) &&
+         setWindows({
+          ...windows,
+          music: {
+           minimise: !windows.music.minimise,
+           close: false
+          }
+         })
+         setBringToFront("music")
+       }}
        >
         Music Player
        </button>} */}
@@ -419,14 +432,16 @@ const Header = ({
        <button
         className="border"
         onClick={() => {
-         setBringToFront("minesweeper")
+         (bringToFront === "minesweeper" && !windows.minesweeper.minimise || windows.minesweeper.minimise) &&
          setWindows({
-         ...windows,
-         minesweeper: {
-          minimise: !windows.minesweeper.minimise,
-          close: false
-         }
-        })}}
+          ...windows,
+          minesweeper: {
+           minimise: !windows.minesweeper.minimise,
+           close: false
+          }
+         })
+         setBringToFront("minesweeper")
+        }}
        >
         MineSweeper
        </button>}

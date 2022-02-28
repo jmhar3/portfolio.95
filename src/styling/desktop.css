@@ -356,6 +356,18 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
 
 /* Projects */
 
+.maximise {
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 90.5%;
+}
+
+.maximise iframe, .maximise .browser img {
+ width: 100%;
+ height: 71vh;
+}
+
 .url {
  margin: 3px;
  padding: 6px;

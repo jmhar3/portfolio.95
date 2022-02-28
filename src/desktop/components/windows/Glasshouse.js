@@ -1,12 +1,19 @@
 import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
 import MarqueeBanner from '../MarqueeBanner';
+import { useState } from 'react';
 
 const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
+ // const [maximise, setMaximise] = useState(false);
+
  return (
    <Draggable handle=".glasshouse">
     <ResizableBox
-     className={`window border ${windows.glasshouse.minimise && "hidden"}  ${(bringToFront === "glasshouse") && "bring-to-front"}`}
+     className={
+      `window border
+      ${windows.glasshouse.minimise && "hidden"}
+      ${(bringToFront === "glasshouse") && "bring-to-front"}
+      `}
      id="glasshouse"
      onClick={() => setBringToFront("glasshouse")}
     >
@@ -23,6 +30,10 @@ const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
          }
         })}
        >-</button>
+       {/* <button
+        className="close-btn center"
+        onClick={() => setMaximise(!maximise)}
+       >▭</button> */}
        <button
         className="close-btn center"
         onClick={() => setWindows({

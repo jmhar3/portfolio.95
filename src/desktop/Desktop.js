@@ -115,6 +115,7 @@ const Desktop = ({ isMobile }) => {
      muted={muted}
      setMuted={setMuted}
      setTabs={setTabs}
+     bringToFront={bringToFront}
      setBringToFront={setBringToFront}
     />
    </div>

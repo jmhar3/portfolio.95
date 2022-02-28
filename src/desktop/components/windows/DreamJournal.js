@@ -1,12 +1,19 @@
 import Draggable from 'react-draggable';
 import dreamJournal from '../../../images/dreamJournal.jpg';
 import MarqueeBanner from '../MarqueeBanner';
+import { useState } from 'react';
 
 const DreamJournal = ({ windows, setWindows, bringToFront, setBringToFront }) => {
+ // const [maximise, setMaximise] = useState(false);
+
  return (
   <Draggable handle=".dreamjournal">
    <div
-    className={`window border ${windows.dreamjournal.minimise && "hidden"} ${(bringToFront === "dreamjournal") && "bring-to-front"}`}
+    className={
+     `window border
+     ${windows.dreamjournal.minimise && "hidden"}
+     ${(bringToFront === "dreamjournal") && "bring-to-front"}`
+    }
     id="dreamjournal"
     onClick={() => setBringToFront("dreamjournal")}
    >
@@ -23,6 +30,10 @@ const DreamJournal = ({ windows, setWindows, bringToFront, setBringToFront }) =>
         }
        })}
       >-</button>
+      {/* <button
+       className="close-btn center"
+       onClick={() => setMaximise(!maximise)}
+      >▭</button> */}
       <button
        className="close-btn center"
        onClick={() => setWindows({

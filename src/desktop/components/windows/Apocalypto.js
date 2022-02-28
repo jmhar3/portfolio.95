@@ -1,12 +1,19 @@
 import Draggable from 'react-draggable';
 import apocalypto from '../../../images/apocalypto.jpg';
 import MarqueeBanner from "../MarqueeBanner";
+import { useState } from 'react';
 
 const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
+ // const [maximise, setMaximise] = useState(false);
+
  return (
   <Draggable handle=".apocalypto">
    <div
-    className={`window border ${windows.apocalypto.minimise && "hidden"} ${(bringToFront === "apocalypto") && "bring-to-front"}`}
+    className={
+     `window border
+     ${windows.apocalypto.minimise && "hidden"} 
+     ${(bringToFront === "apocalypto") && "bring-to-front"}`
+    }
     id="apocalypto"
     onClick={() => setBringToFront("apocalypto")}
    >
@@ -23,6 +30,10 @@ const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
         }
        })}
       >-</button>
+      {/* <button
+       className="close-btn center"
+       onClick={() => setMaximise(!maximise)}
+      >▭</button> */}
       <button
        className="close-btn center"
        onClick={() => setWindows({
