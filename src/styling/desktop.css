@@ -366,6 +366,10 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
  margin: 0;
 }
 
+.url h4:hover, .browser a:hover {
+ color: rgb(118, 198, 235);
+}
+
 .browser {
  margin: 3px;
 }
