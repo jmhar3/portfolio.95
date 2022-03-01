@@ -327,11 +327,20 @@ const Header = ({
       <hr />
      </span>
      <hr className="border" />
-     <a
-      href="mailto:jmhar@protonmail.com" className="center"
-     >
-      <img src={email} alt="E-Mail" />
-     </a>
+     <img
+      src={email} alt="E-Mail"
+      onClick={() => {
+       setStartMenu(false)
+       setWindows({
+        ...windows,
+        contact: {
+         minimise: false,
+         close: false
+        }
+       })
+       setBringToFront("contact")
+      }}
+     />
      <hr className="border" />
 
      <span className="window-buttons row">
@@ -423,6 +432,24 @@ const Header = ({
         }}
        >
         Apocalypto
+       </button>}
+
+      {!windows.contact.close &&
+       <button
+        className="border"
+        onClick={() => {
+         (bringToFront === "contact" && !windows.contact.minimise || windows.contact.minimise) &&
+          setWindows({
+           ...windows,
+           contact: {
+            minimise: !windows.contact.minimise,
+            close: false
+           }
+          })
+         setBringToFront("contact")
+        }}
+       >
+        Contact
        </button>}
 
       {/* {!windows.music.close &&

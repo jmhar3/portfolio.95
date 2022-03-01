@@ -6,11 +6,12 @@ const Skills = () => {
   ["Redux", "300 KB", "Front End"],
   ["Ruby", "240 KB", "Back End"],
   ["Rails", "210 KB", "Back End"],
-  ["PostgreSQL", "330 KB", "Database"],
-  ["Mongo", "300 KB", "Database"],
   ["Node", "180 KB", "Back End"],
-  ["Express", "180 KB", "Back End"]
+  ["Express", "180 KB", "Back End"],
+  ["PostgreSQL", "330 KB", "Database"],
+  ["Mongo", "300 KB", "Database"]
  ]
+ 
  return (
   <table id="skills">
   <tr>
