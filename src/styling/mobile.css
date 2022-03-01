@@ -115,10 +115,7 @@ body {
 }
 
 #notification {
- background-color: var(--container);
  margin: 4.5vw;
- padding: 3vw;
- border-radius: 3vw;
  align-items: center;
  width: 84vw;
 }
@@ -130,11 +127,6 @@ body {
 #notification span h3, #notification p {
  margin: .9vw;
  padding-left: 3vw;
-}
-
-#notification img {
- height: 10.5vw;
- width: 10.5vw;
 }
 
 /* Ripple */

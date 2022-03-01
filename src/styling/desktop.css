@@ -1,17 +1,14 @@
-@media not screen
-and (max-device-height : 900px) 
-and (max-device-width : 1200px) {
- @media (prefers-color-scheme: dark) {
-  body {
-  background: #0e0133;
-  }
+@media (prefers-color-scheme: dark) {
+ body {
+ background: #0e0133;
  }
+}
 
- @media (prefers-color-scheme: light) {
-  body {
-   background: #fcfbff;
-  }
- } 
+@media (prefers-color-scheme: light) {
+ body {
+  background: #fcfbff;
+ }
+} 
 
 h1, h2, h3, h4, h5, p, li, div, button, span, a, input, textarea {
  color: #55036b;
@@ -434,6 +431,7 @@ iframe, .browser img {
 #contact input,
 #contact textarea {
  background: rgb(251, 246, 255);
+ padding-left: 10px;
 }
 
 #contact a,
@@ -516,5 +514,4 @@ iframe, .browser img {
  padding: 5px 3px 0 5px;
  background-color: #55036b;
  color: rgb(205, 239, 255);
-}
 }

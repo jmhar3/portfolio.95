@@ -3,6 +3,7 @@ import message from '../images/coding.png';
 import { useNavigate } from "react-router-dom";
 import Clouds from '../background/Clouds.js';
 import Stars from '../background/Stars.js';
+import Typewriter from 'typewriter-effect';
 
 const Mobile = () => {
  const [date, setDate] = useState(new Date());
@@ -82,11 +83,26 @@ const Mobile = () => {
    >
     <h1>{`${hour}:${minute}`}</h1>
     <h3>{`${weekday}, ${month} ${day}`}</h3>
-    <div id="notification" className="row">
-     <img src={message} />
-     <span className="column">
-      <h3>Jessica Harriman</h3>
-      <p>Welcome to my portfolio.</p>
+    <div
+     className={`window border`}
+     id="notification"
+    >
+     <span className="window-header row welcome">
+      <h4>WELCOME</h4>
+      <span className="row window-buttons">
+      </span>
+     </span>
+     <span className="window-body">
+      <span className="row center intro">
+       <span className="column">
+        <h4><Typewriter
+         onInit={(typewriter) => {
+          typewriter.typeString("Hi, my name's Jessica")
+           .start();
+         }}
+        /></h4>
+       </span>
+      </span>
      </span>
     </div>
     <span className="unlock column center">
