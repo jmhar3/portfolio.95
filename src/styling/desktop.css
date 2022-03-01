@@ -410,12 +410,12 @@ iframe, .browser img {
 
 /* Contact */
 
-#contact .window-body {
+#contact form {
  padding: 10px;
  gap: 10px;
 }
 
-#contact .window-body .row {
+#contact form .row {
  justify-content: space-between;
  margin: 0;
 }
@@ -424,7 +424,9 @@ iframe, .browser img {
  margin: 0;
 }
 
-#contact a, #contact input, #contact textarea {
+#contact a,
+#contact input,
+#contact textarea {
  padding: 5px;
  background: rgb(251, 246, 255);
  text-align: left;
@@ -436,7 +438,9 @@ iframe, .browser img {
  padding-bottom: 2px;
 }
 
-#contact a, #contact input {
+#contact a,
+#contact input,
+#contact .window-body h3 {
  width: 300px;
  height: 20px;
 }
@@ -447,7 +451,9 @@ iframe, .browser img {
  margin-bottom: 10px;
 }
 
-#contact a:hover, #contact input:hover, #contact textarea:hover {
+#contact a:hover,
+#contact input:hover,
+#contact textarea:hover {
  box-shadow: none;
 }
 
