@@ -13,7 +13,7 @@ and (max-device-width : 1200px) {
   }
  } 
 
-h1, h2, h3, h4, h5, p, li, div, button, span, a {
+h1, h2, h3, h4, h5, p, li, div, button, span, a, input, textarea {
  color: #55036b;
  text-align: center;
 }
@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, p, li, div, button, span, a {
  border-top: 2px solid #55036b;
  border-right: 2px solid #fff;
  border-bottom: 2px solid #fff;
+ box-shadow: 2px 2px #cb98d8 inset;
 }
 
 button {
@@ -399,6 +400,55 @@ iframe, .browser img {
 
 .marquee h4 {
  margin: 9px;
+}
+
+/* Contact */
+
+#contact .row {
+ justify-content: space-between;
+}
+
+.right {
+ width: 100%;
+ padding-right: 12px;
+ display: flex;
+ justify-content: flex-end;
+}
+
+#contact h5 {
+ margin: 0;
+}
+
+#contact a, #contact input, #contact textarea {
+ padding: 5px;
+ background: rgb(251, 246, 255);
+ text-align: left;
+ font-size: 16px;
+}
+
+#contact a {
+ padding-top: 8px;
+ padding-bottom: 2px;
+}
+
+#contact a, #contact input {
+ margin-left: 10px;
+ width: 240px;
+ height: 20px;
+}
+
+#contact textarea {
+ width: 300px;
+ height: 60px;
+ margin-bottom: 10px;
+}
+
+#contact a:hover, #contact input:hover, #contact textarea:hover {
+ box-shadow: none;
+}
+
+#contact input:focus, #contact textarea:focus {
+ outline: none;
 }
 
 /* Music Player */

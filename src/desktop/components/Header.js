@@ -328,6 +328,7 @@ const Header = ({
      </span>
      <hr className="border" />
      <img
+      className="clickable"
       src={email} alt="E-Mail"
       onClick={() => {
        setStartMenu(false)
