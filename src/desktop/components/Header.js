@@ -71,6 +71,7 @@ const Header = ({
     <ul
      className={`${!startMenu && "hidden"} border start-menu`}
     >
+
      <li
       className="row center"
       onMouseEnter={() => {
@@ -82,6 +83,29 @@ const Header = ({
        Profile
       </span>
       ►
+     </li>
+
+     <li
+      className="row center clickable"
+      onMouseEnter={() => {
+       setAboutMenu(false)
+      }}
+      onClick={() => {
+       setStartMenu(false)
+       setBringToFront("resume")
+       setWindows({
+        ...windows,
+        resume: {
+         minimise: false,
+         close: false
+        }
+       })
+      }}
+     >
+      <span className="row center">
+       <img src={computer} />
+       Resume
+      </span>
      </li>
 
      {/* <li

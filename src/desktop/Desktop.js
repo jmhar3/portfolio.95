@@ -8,6 +8,7 @@ import DreamJournal from './components/windows/DreamJournal';
 import Glasshouse from './components/windows/Glasshouse';
 import Apocalypto from './components/windows/Apocalypto';
 import Contact from './components/windows/Contact';
+import Resume from './components/windows/Resume';
 import Music from './components/windows/Music';
 import MineSweeper from './components/windows/MineSweeper';
 import Header from './components/Header.js';
@@ -38,6 +39,10 @@ const Desktop = ({ isMobile }) => {
    close: true
   },
   contact: {
+   minimise: false,
+   close: true
+  },
+  resume: {
    minimise: false,
    close: true
   },
@@ -107,6 +112,13 @@ const Desktop = ({ isMobile }) => {
        bringToFront={bringToFront}
        setBringToFront={setBringToFront}
       />}
+      {!windows.resume.close &&
+       <Resume
+        windows={windows}
+        setWindows={setWindows}
+        bringToFront={bringToFront}
+        setBringToFront={setBringToFront}
+       />}
     {/* {!windows.music.close &&
      <Music
       windows={windows}
