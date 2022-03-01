@@ -1,5 +1,5 @@
 import Draggable from 'react-draggable';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { randomNumber } from '../../../Helpers';
 
 const Contact = ({
@@ -12,9 +12,20 @@ const Contact = ({
  const [left, setLeft] = useState(0);
 
  useEffect(() => {
-  setTop(randomNumber(5, 50))
-  setLeft(randomNumber(15, 60))
+  setTop(randomNumber(10, 30))
+  setLeft(randomNumber(10, 50))
  }, [])
+ 
+ const [values, setValues] = useState({
+  sender: "",
+  subject: "",
+  message: ""
+ });
+
+ const sendMessage = (e) => {
+  e.preventDefault();
+  console.log(values)
+ }
 
  return (
   <Draggable handle=".contact">
@@ -53,7 +64,10 @@ const Contact = ({
       >&times;</button>
      </span>
     </span>
-    <form className="window-body">
+    <form
+     className="window-body column"
+     onSubmit={sendMessage}
+    >
      <div className="row center">
       <h5>To:</h5>
       <a
@@ -70,6 +84,11 @@ const Contact = ({
        type="text"
        name="sender"
        className="rev-border"
+       value={values.sender} 
+       onChange={(e) => setValues({
+        ...values,
+        sender: e.target.value
+       })}
       />
      </div>
      <div className="row center">
@@ -78,12 +97,22 @@ const Contact = ({
        type="text"
        name="subject"
        className="rev-border"
+       value={values.subject} 
+       onChange={(e) => setValues({
+        ...values,
+        subject: e.target.value
+       })}
       />
      </div>
      <div className="column center">
       <textarea
        name="message"
        className="rev-border"
+       value={values.message} 
+       onChange={(e) => setValues({
+        ...values,
+        message: e.target.value
+       })}
       />
       <div className="right">
        <button type="submit">Send</button>
