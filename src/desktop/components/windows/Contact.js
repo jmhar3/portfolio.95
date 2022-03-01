@@ -83,7 +83,7 @@ const Contact = ({
        onSubmit={sendMessage}
       >
        <div className="row center">
-        <h5>To:</h5>
+        <h5 className="border">To:</h5>
         <a
          href="mailto:jmhar@protonmail.com"
          target="_blank"
@@ -93,7 +93,7 @@ const Contact = ({
         </a>
        </div>
        <div className="row center">
-        <h5>From:</h5>
+        <h5 className="border">From:</h5>
         <input
          type="text"
          name="sender"

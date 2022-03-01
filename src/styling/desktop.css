@@ -415,21 +415,31 @@ iframe, .browser img {
  gap: 10px;
 }
 
-#contact form .row {
+#contact form .row,
+#contact h5,
+#contact button {
  justify-content: space-between;
- margin: 0;
-}
-
-#contact h5, #contact button {
  margin: 0;
 }
 
 #contact a,
 #contact input,
-#contact textarea {
+#contact textarea,
+#contact h5 {
  padding: 5px;
- background: rgb(251, 246, 255);
  text-align: left;
+}
+
+#contact a,
+#contact input,
+#contact textarea {
+ background: rgb(251, 246, 255);
+}
+
+#contact a,
+#contact input,
+#contact textarea,
+#contact button {
  font-size: 16px;
 }
 
@@ -438,10 +448,16 @@ iframe, .browser img {
  padding-bottom: 2px;
 }
 
+#contact h5 {
+ width: 40px;
+ text-align: center;
+}
+
 #contact a,
 #contact input,
 #contact .window-body h3 {
- width: 300px;
+ margin-left: 20px;
+ width: 310px;
  height: 20px;
 }
 
