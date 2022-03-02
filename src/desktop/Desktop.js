@@ -2,6 +2,7 @@ import Clouds from '../background/Clouds.js';
 import Stars from '../background/Stars.js';
 import Moon from '../background/Moon.js';
 import Links from './components/Links';
+import Window from './components/windows/Window';
 import Welcome from './components/windows/Welcome';
 import Profile from './components/windows/Profile';
 import DreamJournal from './components/windows/DreamJournal';
@@ -69,13 +70,22 @@ const Desktop = ({ isMobile }) => {
    <div id="desktop">
     <Links />
     {!windows.welcome.close &&
-     <Welcome
+     <Window
       windows={windows}
       setWindows={setWindows}
       bringToFront={bringToFront}
       setBringToFront={setBringToFront}
-      setTabs={setTabs}
-     />}
+      name="welcome"
+      topValues={[5, 50]}
+      leftValues={[15, 60]}
+      body={
+       <Welcome
+        windows={windows}
+        setWindows={setWindows}
+        setTabs={setTabs}
+       />
+      } />
+    }
     {!windows.profile.close &&
      <Profile
       windows={windows}
@@ -106,14 +116,14 @@ const Desktop = ({ isMobile }) => {
       bringToFront={bringToFront}
       setBringToFront={setBringToFront}
      />}
-     {!windows.contact.close &&
-      <Contact
-       windows={windows}
-       setWindows={setWindows}
-       bringToFront={bringToFront}
-       setBringToFront={setBringToFront}
-      />}
-      {/* {!windows.resume.close &&
+    {!windows.contact.close &&
+     <Contact
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+     />}
+    {/* {!windows.resume.close &&
        <Resume
         windows={windows}
         setWindows={setWindows}
