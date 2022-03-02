@@ -85,7 +85,7 @@ const Header = ({
       ►
      </li>
 
-     <li
+     {/* <li
       className="row center clickable"
       onMouseEnter={() => {
        setAboutMenu(false)
@@ -106,7 +106,7 @@ const Header = ({
        <img src={computer} />
        Resume
       </span>
-     </li>
+     </li> */}
 
      {/* <li
       className="row center"

@@ -1,6 +1,8 @@
 import Draggable from 'react-draggable';
 import { randomNumber } from '../../../Helpers';
 import { useState, useEffect } from 'react';
+import { Document, Page } from 'react-pdf';
+import resume from '../../../files/Jessica Harriman - Resume.pdf';
 
 const Resume = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);
@@ -54,6 +56,9 @@ const Resume = ({ windows, setWindows, bringToFront, setBringToFront }) => {
      </span>
     </header>
     <span className="window-body">
+     <Document file={resume}>
+      <Page/>
+     </Document>
     </span>
    </div>
   </Draggable >

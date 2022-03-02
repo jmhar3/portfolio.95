@@ -112,13 +112,13 @@ const Desktop = ({ isMobile }) => {
        bringToFront={bringToFront}
        setBringToFront={setBringToFront}
       />}
-      {!windows.resume.close &&
+      {/* {!windows.resume.close &&
        <Resume
         windows={windows}
         setWindows={setWindows}
         bringToFront={bringToFront}
         setBringToFront={setBringToFront}
-       />}
+       />} */}
     {/* {!windows.music.close &&
      <Music
       windows={windows}
