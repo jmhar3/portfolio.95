@@ -74,6 +74,7 @@ const Desktop = ({ isMobile }) => {
       setWindows={setWindows}
       bringToFront={bringToFront}
       setBringToFront={setBringToFront}
+      setTabs={setTabs}
      />}
     {!windows.profile.close &&
      <Profile

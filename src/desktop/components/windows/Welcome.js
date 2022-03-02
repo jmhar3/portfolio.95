@@ -78,7 +78,9 @@ const Welcome = ({
         setTabs({
          about: true,
          skills: false,
-         education: false
+         education: false,
+         work: false,
+         projects: false
         })
       }}>
         Learn More
