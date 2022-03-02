@@ -3,6 +3,7 @@ import { ResizableBox } from 'react-resizable';
 import MarqueeBanner from '../MarqueeBanner';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
+import WindowButtons from './WindowButtons';
 
 const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);
@@ -28,32 +29,11 @@ const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
     >
      <span className="window-header row glasshouse">
       <h4>GLASSHOUSE</h4>
-      <span className="row window-buttons">
-       <button
-        className="close-btn center"
-        onClick={() => setWindows({
-         ...windows,
-         glasshouse: {
-          minimise: true,
-          close: false
-         }
-        })}
-       >-</button>
-       {/* <button
-        className="close-btn center"
-        onClick={() => setMaximise(!maximise)}
-       >▭</button> */}
-       <button
-        className="close-btn center"
-        onClick={() => setWindows({
-         ...windows,
-         glasshouse: {
-          minimise: false,
-          close: true
-         }
-        })}
-       >&times;</button>
-      </span>
+     <WindowButtons
+      name="glasshouse"
+      windows={windows}
+      setWindows={setWindows} 
+     />
      </span>
      <span className="window-body">
       <div className="url rev-border">

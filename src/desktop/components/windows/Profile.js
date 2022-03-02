@@ -6,6 +6,7 @@ import Work from '../tabs/Work';
 import Projects from '../tabs/Projects';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
+import WindowButtons from './WindowButtons';
 
 const Profile = ({
  windows,
@@ -33,31 +34,11 @@ const Profile = ({
    >
     <span className="window-header row profile">
      <h4>PROFILE</h4>
-
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        profile: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        profile: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
-     </span>
-
+     <WindowButtons
+      name="profile"
+      windows={windows}
+      setWindows={setWindows} 
+     />
     </span>
      <ul className="row tabs clickable">
       <li

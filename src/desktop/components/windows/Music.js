@@ -7,6 +7,7 @@ import pause from '../../../images/pause.png';
 import speed from '../../../images/speed.png';
 import mute from '../../../images/heart.png';
 import { randomNumber } from '../../../helpers/Helpers';
+import WindowButtons from './WindowButtons';
 
 const Music = ({
  windows,
@@ -38,28 +39,11 @@ const Music = ({
    >
     <span className="window-header row music">
      <h4>MUSIC PLAYER</h4>
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        music: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        music: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
-     </span>
+     <WindowButtons
+      name="music"
+      windows={windows}
+      setWindows={setWindows} 
+     />
     </span>
     <span className="window-body">
      <span className="column">

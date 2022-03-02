@@ -6,6 +6,7 @@ import Cell from '../minesweeper/Cell';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { randomNumber } from '../../../helpers/Helpers';
+import WindowButtons from './WindowButtons';
 
 const MineSweeper = ({
  windows,
@@ -122,30 +123,11 @@ const MineSweeper = ({
    >
     <span className="window-header row minesweeper">
      <h4>MINESWEEPER</h4>
-
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        minesweeper: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        minesweeper: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
-     </span>
+     <WindowButtons
+      name="minesweeper"
+      windows={windows}
+      setWindows={setWindows} 
+     />
     </span>
 
     <span className="window-body">

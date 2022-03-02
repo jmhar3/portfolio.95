@@ -3,6 +3,7 @@ import apocalypto from '../../../images/apocalypto.jpg';
 import MarqueeBanner from "../MarqueeBanner";
 import { randomNumber } from '../../../helpers/Helpers';
 import { useState, useEffect } from 'react';
+import WindowButtons from './WindowButtons';
 
 const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);
@@ -28,32 +29,11 @@ const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {
    >
     <header className="window-header row apocalypto">
      <h4>APOCALYPTO</h4>
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        apocalypto: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-      {/* <button
-       className="close-btn center"
-       onClick={() => setMaximise(!maximise)}
-      >▭</button> */}
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        apocalypto: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
-     </span>
+     <WindowButtons
+      name="apocalypto"
+      windows={windows}
+      setWindows={setWindows} 
+     />
     </header>
     <span className="window-body">
      <div className="url rev-border">

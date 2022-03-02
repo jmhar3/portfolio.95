@@ -1,6 +1,7 @@
 import Draggable from 'react-draggable';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
+import WindowButtons from './WindowButtons';
 
 const Contact = ({
  windows,
@@ -47,28 +48,11 @@ const Contact = ({
    >
     <span className="window-header row contact">
      <h4>CONTACT</h4>
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        contact: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        contact: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
-     </span>
+     <WindowButtons
+      name="contact"
+      windows={windows}
+      setWindows={setWindows} 
+     />
     </span>
     <span
      className="window-body"

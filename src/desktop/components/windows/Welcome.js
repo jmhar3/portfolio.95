@@ -2,6 +2,7 @@ import Draggable from 'react-draggable';
 import Typewriter from 'typewriter-effect';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
+import WindowButtons from './WindowButtons';
 
 const Welcome = ({
  windows,
@@ -28,28 +29,11 @@ const Welcome = ({
    >
     <span className="window-header row welcome">
      <h4>WELCOME</h4>
-     <span className="row window-buttons">
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        welcome: {
-         minimise: true,
-         close: false
-        }
-       })}
-      >-</button>
-      <button
-       className="close-btn center"
-       onClick={() => setWindows({
-        ...windows,
-        welcome: {
-         minimise: false,
-         close: true
-        }
-       })}
-      >&times;</button>
-     </span>
+     <WindowButtons
+      name="welcome"
+      windows={windows}
+      setWindows={setWindows} 
+     />
     </span>
     <span className="window-body">
      <span className="row center intro">
