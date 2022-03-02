@@ -11,7 +11,7 @@ import Contact from './components/windows/Contact';
 import Resume from './components/windows/Resume';
 import Music from './components/windows/Music';
 import MineSweeper from './components/windows/MineSweeper';
-import Header from './components/Header.js';
+import Header from './components/header/Header.js';
 import { useState } from 'react';
 
 const Desktop = ({ isMobile }) => {

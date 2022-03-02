@@ -1,14 +1,15 @@
-import logo from '../../images/heart.png';
-import email from '../../images/email.png';
-import computer from '../../images/computer.png';
+import logo from '../../../images/heart.png';
+import email from '../../../images/email.png';
+import computer from '../../../images/computer.png';
 import { useState, useEffect } from 'react';
+import StartMenu from './StartMenu';
+import AboutMenu from './AboutMenu';
 
 const Header = ({
  windows,
  setWindows,
  muted,
  setMuted,
- tabs,
  setTabs,
  bringToFront,
  setBringToFront
@@ -68,227 +69,25 @@ const Header = ({
  return (
   <div className="nav">
    <span className="row dropdowns">
-    <ul
-     className={`${!startMenu && "hidden"} border start-menu`}
-    >
+    <StartMenu
+     windows={windows}
+     setWindows={setWindows}
+     startMenu={startMenu}
+     setStartMenu={setStartMenu}
+     setProgramsMenu={setProgramsMenu}
+     setAboutMenu={setAboutMenu}
+     setBringToFront={setBringToFront}
+    />
 
-     <li
-      className="row center"
-      onMouseEnter={() => {
-       setAboutMenu(true)
-       setProgramsMenu(false)
-      }}>
-      <span className="row center">
-       <img src={computer} />
-       Profile
-      </span>
-      ►
-     </li>
-
-     {/* <li
-      className="row center clickable"
-      onMouseEnter={() => {
-       setAboutMenu(false)
-      }}
-      onClick={() => {
-       setStartMenu(false)
-       setBringToFront("resume")
-       setWindows({
-        ...windows,
-        resume: {
-         minimise: false,
-         close: false
-        }
-       })
-      }}
-     >
-      <span className="row center">
-       <img src={computer} />
-       Resume
-      </span>
-     </li> */}
-
-     {/* <li
-      className="row center"
-      onMouseEnter={() => {
-       setAboutMenu(false)
-       setProgramsMenu(true)
-      }}>
-      <span className="row center">
-       <img src={computer} />
-       Programs
-      </span>
-      ►
-     </li> */}
-
-     <li
-      className="row center clickable"
-      onClick={() => {
-       setStartMenu(false)
-       setBringToFront("minesweeper")
-       setWindows({
-        ...windows,
-        minesweeper: {
-         minimise: false,
-         close: false
-        }
-       })
-      }}
-     >
-      <span className="row center">
-       <img src={computer} />
-       MineSweeper
-      </span>
-     </li>
-
-     <li
-      onMouseEnter={() => {
-       setAboutMenu(false)
-       setProgramsMenu(false)
-      }}
-      className="row center clickable"
-      onClick={() => {
-       setStartMenu(false)
-       setBringToFront("welcome")
-       setWindows({
-        ...windows,
-        welcome: {
-         minimise: false,
-         close: false
-        }
-       })
-      }}
-     >
-      <span className="row center">
-       <img src={computer} />
-       <span>
-        Run
-       </span>
-      </span>
-     </li>
-    </ul>
-
-    {/* About Menu */}
-    <ul
-     className={`${!aboutMenu && "remove"} border clickable`}
-     onMouseLeave={() => setAboutMenu(false)}
-    >
-     <li
-      onClick={() => {
-       setStartMenu(false)
-       setAboutMenu(false)
-       setBringToFront("profile")
-       setWindows({
-        ...windows,
-        profile: {
-         minimise: false,
-         close: false
-        }
-       })
-       setTabs({
-        about: true,
-        skills: false,
-        education: false,
-        work: false,
-        projects: false
-       })
-      }}
-     >
-      About
-     </li>
-     <li
-      onClick={() => {
-       setStartMenu(false)
-       setAboutMenu(false)
-       setBringToFront("profile")
-       setWindows({
-        ...windows,
-        profile: {
-         minimise: false,
-         close: false
-        }
-       })
-       setTabs({
-        about: false,
-        skills: true,
-        education: false,
-        work: false,
-        projects: false
-       })
-      }}
-     >
-      Skills
-     </li>
-     <li
-      onClick={() => {
-       setStartMenu(false)
-       setAboutMenu(false)
-       setBringToFront("profile")
-       setWindows({
-        ...windows,
-        profile: {
-         minimise: false,
-         close: false
-        }
-       })
-       setTabs({
-        about: false,
-        skills: false,
-        education: true,
-        work: false,
-        projects: false
-       })
-      }}
-     >
-      Education
-     </li>
-     <li
-      onClick={() => {
-       setStartMenu(false)
-       setAboutMenu(false)
-       setBringToFront("profile")
-       setWindows({
-        ...windows,
-        profile: {
-         minimise: false,
-         close: false
-        }
-       })
-       setTabs({
-        about: false,
-        skills: false,
-        education: false,
-        work: true,
-        projects: false
-       })
-      }}
-     >
-      Work
-     </li>
-     <li
-      onClick={() => {
-       setStartMenu(false)
-       setAboutMenu(false)
-       setBringToFront("profile")
-       setWindows({
-        ...windows,
-        profile: {
-         minimise: false,
-         close: false
-        }
-       })
-       setTabs({
-        about: false,
-        skills: false,
-        education: false,
-        work: false,
-        projects: true
-       })
-      }}
-     >
-      Projects
-     </li>
-    </ul>
+    <AboutMenu
+     windows={windows}
+     setWindows={setWindows}
+     setStartMenu={setStartMenu}
+     setTabs={setTabs}
+     aboutMenu={aboutMenu}
+     setAboutMenu={setAboutMenu}
+     setBringToFront={setBringToFront}
+    />
 
     {/* Programs Menu */}
     <ul
