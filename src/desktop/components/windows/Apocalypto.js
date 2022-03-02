@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 import apocalypto from '../../../images/apocalypto.jpg';
 import MarqueeBanner from "../MarqueeBanner";
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 import { useState, useEffect } from 'react';
 
 const Apocalypto = ({ windows, setWindows, bringToFront, setBringToFront }) => {

@@ -1,6 +1,6 @@
 import Draggable from 'react-draggable';
 import { useState, useEffect } from 'react';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const Contact = ({
  windows,

@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 import Typewriter from 'typewriter-effect';
 import { useState, useEffect } from 'react';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const Welcome = ({
  windows,

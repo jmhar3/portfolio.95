@@ -5,7 +5,7 @@ import { revealed } from "../minesweeper/Reveal";
 import Cell from '../minesweeper/Cell';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const MineSweeper = ({
  windows,

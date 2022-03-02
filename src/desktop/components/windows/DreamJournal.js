@@ -2,7 +2,7 @@ import Draggable from 'react-draggable';
 import dreamJournal from '../../../images/dreamJournal.jpg';
 import MarqueeBanner from '../MarqueeBanner';
 import { useState, useEffect } from 'react';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const DreamJournal = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);

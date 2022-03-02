@@ -1,5 +1,5 @@
 import Draggable from 'react-draggable';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 import { useState, useEffect } from 'react';
 import { Document, Page } from 'react-pdf';
 import resume from '../../../files/Jessica Harriman - Resume.pdf';

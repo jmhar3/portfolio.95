@@ -6,7 +6,7 @@ import play from '../../../images/play.png';
 import pause from '../../../images/pause.png';
 import speed from '../../../images/speed.png';
 import mute from '../../../images/heart.png';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const Music = ({
  windows,

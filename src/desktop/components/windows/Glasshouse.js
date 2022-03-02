@@ -2,7 +2,7 @@ import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
 import MarqueeBanner from '../MarqueeBanner';
 import { useState, useEffect } from 'react';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const Glasshouse = ({ windows, setWindows, bringToFront, setBringToFront }) => {
  // const [maximise, setMaximise] = useState(false);

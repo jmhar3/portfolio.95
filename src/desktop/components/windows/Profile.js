@@ -5,7 +5,7 @@ import Education from '../tabs/Education';
 import Work from '../tabs/Work';
 import Projects from '../tabs/Projects';
 import { useState, useEffect } from 'react';
-import { randomNumber } from '../../../Helpers';
+import { randomNumber } from '../../../helpers/Helpers';
 
 const Profile = ({
  windows,
