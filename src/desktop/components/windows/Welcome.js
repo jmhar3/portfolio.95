@@ -4,7 +4,8 @@ import Window from './Window';
 const Welcome = ({
  windows,
  setWindows,
- setTabs
+ setTabs,
+ tabs
 }) => {
  return (
   <>
@@ -33,11 +34,8 @@ const Welcome = ({
       }
      })
      setTabs({
-      about: true,
-      skills: false,
-      education: false,
-      work: false,
-      projects: false
+      ...Object.keys(tabs).forEach(v => tabs[v] = false),
+      about: true
      })
     }}>
     Learn More

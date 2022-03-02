@@ -69,6 +69,17 @@ const Desktop = ({ isMobile }) => {
   <>
    <div id="desktop">
     <Links />
+
+    <Header
+     windows={windows}
+     setWindows={setWindows}
+     muted={muted}
+     setMuted={setMuted}
+     setTabs={setTabs}
+     bringToFront={bringToFront}
+     setBringToFront={setBringToFront}
+    />
+
     {!windows.welcome.close &&
      <Window
       windows={windows}
@@ -83,76 +94,114 @@ const Desktop = ({ isMobile }) => {
         windows={windows}
         setWindows={setWindows}
         setTabs={setTabs}
-       />
-      } />
-    }
+        tabs={tabs}
+       />}
+     />}
+
     {!windows.profile.close &&
-     <Profile
+     <Window
       windows={windows}
       setWindows={setWindows}
-      tabs={tabs}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="profile"
+      topValues={[5, 15]}
+      leftValues={[15, 50]}
       setTabs={setTabs}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
-     />}
-    {!windows.dreamjournal.close &&
-     <DreamJournal
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
-     />}
-    {!windows.glasshouse.close &&
-     <Glasshouse
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
-     />}
-    {!windows.apocalypto.close &&
-     <Apocalypto
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
-     />}
-    {!windows.contact.close &&
-     <Contact
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
-     />}
-    {/* {!windows.resume.close &&
-       <Resume
+      tabs={tabs}
+      body={
+       <Profile
         windows={windows}
         setWindows={setWindows}
-        bringToFront={bringToFront}
+        tabs={tabs}
         setBringToFront={setBringToFront}
-       />} */}
-    {/* {!windows.music.close &&
-     <Music
-      windows={windows}
-      setWindows={setWindows}
-      muted={muted}
-      setMuted={setMuted}
-     />} */}
-    {!windows.minesweeper.close &&
-     <MineSweeper
+       />}
+     />}
+
+    {!windows.dreamjournal.close &&
+     <Window
       windows={windows}
       setWindows={setWindows}
       bringToFront={bringToFront}
       setBringToFront={setBringToFront}
+      name="dreamjournal"
+      topValues={[3, 6]}
+      leftValues={[6, 30]}
+      body={<DreamJournal />}
      />}
-    <Header
-     windows={windows}
-     setWindows={setWindows}
-     muted={muted}
-     setMuted={setMuted}
-     setTabs={setTabs}
-     bringToFront={bringToFront}
-     setBringToFront={setBringToFront}
-    />
+
+    {!windows.glasshouse.close &&
+     <Window
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="glasshouse"
+      topValues={[3, 6]}
+      leftValues={[6, 30]}
+      body={<Glasshouse />}
+     />}
+
+    {!windows.apocalypto.close &&
+     <Window
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="apocalypto"
+      topValues={[3, 6]}
+      leftValues={[6, 30]}
+      body={<Apocalypto />}
+     />}
+
+    {!windows.contact.close &&
+     <Window
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="contact"
+      topValues={[10, 30]}
+      leftValues={[10, 60]}
+      body={<Contact />}
+     />}
+
+    {!windows.resume.close &&
+     <Window
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="resume"
+      topValues={[3, 6]}
+      leftValues={[6, 30]}
+      body={<Resume />}
+     />}
+
+    {!windows.music.close &&
+     <Window
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="music"
+      topValues={[10, 30]}
+      leftValues={[20, 60]}
+      body={<Music muted={muted} />}
+     />
+    }
+
+    {!windows.minesweeper.close &&
+     <Window
+      windows={windows}
+      setWindows={setWindows}
+      bringToFront={bringToFront}
+      setBringToFront={setBringToFront}
+      name="minesweeper"
+      topValues={[10, 30]}
+      leftValues={[20, 60]}
+      body={<MineSweeper />}
+     />}
    </div>
 
    <Stars />

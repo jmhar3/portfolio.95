@@ -2,8 +2,11 @@ import Draggable from 'react-draggable';
 import WindowButtons from './WindowButtons';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
+import Tabs from '../tabs/Tabs';
 
 const Window = ({
+ tabs,
+ setTabs,
  windows,
  setWindows,
  bringToFront,
@@ -41,6 +44,8 @@ const Window = ({
       setWindows={setWindows}
      />
     </span>
+    {name === "profile" && 
+    <Tabs tabs={tabs} setTabs={setTabs} />}
     <span
      className="window-body"
     >
