@@ -16,6 +16,8 @@ const Window = ({
  leftValues,
  body
 }) => {
+ const [maximise, setMaximise] = useState(false);
+
  const [top, setTop] = useState(0);
  const [left, setLeft] = useState(0);
 
@@ -30,7 +32,8 @@ const Window = ({
     className={
      `window border
      ${windows[name].minimise && "hidden"}
-     ${(bringToFront === name) && "bring-to-front"}`
+     ${(bringToFront === name) && "bring-to-front"}
+     ${maximise && 'maximise'}`
     }
     id={name}
     onClick={() => setBringToFront(name)}
@@ -42,6 +45,8 @@ const Window = ({
       name={name}
       windows={windows}
       setWindows={setWindows}
+      maximise={maximise}
+      setMaximise={setMaximise}
      />
     </span>
     {name === "profile" && 

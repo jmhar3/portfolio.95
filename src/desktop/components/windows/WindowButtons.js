@@ -1,8 +1,15 @@
 const WindowButtons = ({
  name,
  windows,
- setWindows
+ setWindows,
+ maximise,
+ setMaximise
 }) => {
+ const maximisableWindow =
+  name === "apocalypto" ||
+  name === "glasshouse" ||
+  name === "dreamjournal";
+
  return (
   <span className="row window-buttons">
    <button
@@ -15,10 +22,10 @@ const WindowButtons = ({
      }
     })}
    >-</button>
-   {/* <button
+   {maximisableWindow && <button
    className="close-btn center"
    onClick={() => setMaximise(!maximise)}
-  >▭</button> */}
+  >▭</button>}
    <button
     className="close-btn center"
     onClick={() => setWindows({

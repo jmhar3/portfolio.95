@@ -2,8 +2,6 @@ import dreamJournal from '../../../images/dreamJournal.jpg';
 import MarqueeBanner from '../MarqueeBanner';
 
 const DreamJournal = () => {
- // const [maximise, setMaximise] = useState(false);
-
  return (
   <>
    <div className="url rev-border">

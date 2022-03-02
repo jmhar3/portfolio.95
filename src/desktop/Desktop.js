@@ -17,7 +17,9 @@ import { useState } from 'react';
 
 const Desktop = ({ isMobile }) => {
  const [muted, setMuted] = useState(false);
+
  const [bringToFront, setBringToFront] = useState("welcome");
+
  const [windows, setWindows] = useState({
   welcome: {
    minimise: false,
@@ -89,8 +91,7 @@ const Desktop = ({ isMobile }) => {
       name="welcome"
       topValues={[5, 50]}
       leftValues={[15, 60]}
-      body={
-       <Welcome {...props} />}
+      body={<Welcome {...props} />}
      />}
 
     {!windows.profile.close &&
@@ -99,8 +100,7 @@ const Desktop = ({ isMobile }) => {
       name="profile"
       topValues={[5, 15]}
       leftValues={[15, 50]}
-      body={
-       <Profile {...props} />}
+      body={<Profile {...props} />}
      />}
 
     {!windows.dreamjournal.close &&

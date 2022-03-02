@@ -2,8 +2,6 @@ import apocalypto from '../../../images/apocalypto.jpg';
 import MarqueeBanner from "../MarqueeBanner";
 
 const Apocalypto = () => {
- // const [maximise, setMaximise] = useState(false);
-
  return (
   <>
    <div className="url rev-border">

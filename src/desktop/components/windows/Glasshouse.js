@@ -1,8 +1,6 @@
 import MarqueeBanner from '../MarqueeBanner';
 
 const Glasshouse = () => {
- // const [maximise, setMaximise] = useState(false);
-
  return (
   <>
    <div className="url rev-border">
