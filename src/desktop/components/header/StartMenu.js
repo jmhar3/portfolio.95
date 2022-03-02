@@ -1,113 +1,47 @@
 import computer from '../../../images/computer.png';
+import StartTab from './StartTab';
 
-const StartMenu = ({
- windows,
- setWindows,
- startMenu,
- setStartMenu,
- setProgramsMenu,
- setAboutMenu,
- setBringToFront
-}) => {
+const StartMenu = (props) => {
+ const { startMenu } = props
+
  return (
   <ul
    className={`${!startMenu && "hidden"} border start-menu`}
   >
+   <StartTab
+    {...props}
+    clickable={false}
+    name="about"
+    label="Profile"
+   />
 
-   <li
-    className="row center"
-    onMouseEnter={() => {
-     setAboutMenu(true)
-     setProgramsMenu(false)
-    }}>
-    <span className="row center">
-     <img src={computer} />
-     Profile
-    </span>
-    ►
-   </li>
+   {/* <StartTab
+    {...props}
+    clickable={true}
+    name="resume"
+    label="Resume"
+   />
 
-   {/* <li
-      className="row center clickable"
-      onMouseEnter={() => {
-       setAboutMenu(false)
-      }}
-      onClick={() => {
-       setStartMenu(false)
-       setBringToFront("resume")
-       setWindows({
-        ...windows,
-        resume: {
-         minimise: false,
-         close: false
-        }
-       })
-      }}
-     >
-      <span className="row center">
-       <img src={computer} />
-       Resume
-      </span>
-     </li> */}
+   <StartTab
+    {...props}
+    clickable={false}
+    name="programs"
+    label="Programs"
+   /> */}
 
-   {/* <li
-      className="row center"
-      onMouseEnter={() => {
-       setAboutMenu(false)
-       setProgramsMenu(true)
-      }}>
-      <span className="row center">
-       <img src={computer} />
-       Programs
-      </span>
-      ►
-     </li> */}
+   <StartTab
+    {...props}
+    clickable={true}
+    name="minesweeper"
+    label="MineSweeper"
+   />
 
-   <li
-    className="row center clickable"
-    onClick={() => {
-     setStartMenu(false)
-     setBringToFront("minesweeper")
-     setWindows({
-      ...windows,
-      minesweeper: {
-       minimise: false,
-       close: false
-      }
-     })
-    }}
-   >
-    <span className="row center">
-     <img src={computer} />
-     MineSweeper
-    </span>
-   </li>
-
-   <li
-    onMouseEnter={() => {
-     setAboutMenu(false)
-     setProgramsMenu(false)
-    }}
-    className="row center clickable"
-    onClick={() => {
-     setStartMenu(false)
-     setBringToFront("welcome")
-     setWindows({
-      ...windows,
-      welcome: {
-       minimise: false,
-       close: false
-      }
-     })
-    }}
-   >
-    <span className="row center">
-     <img src={computer} />
-     <span>
-      Run
-     </span>
-    </span>
-   </li>
+   <StartTab
+    {...props}
+    clickable={true}
+    name="welcome"
+    label="Run"
+   />
   </ul>
  )
 }
