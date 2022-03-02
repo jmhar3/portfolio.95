@@ -65,65 +65,47 @@ const Desktop = ({ isMobile }) => {
   projects: false
  })
 
+ const props = {
+  windows: windows,
+  setWindows: setWindows,
+  bringToFront: bringToFront,
+  setBringToFront: setBringToFront,
+  muted: muted,
+  setMuted: setMuted,
+  tabs: tabs,
+  setTabs: setTabs
+ }
+
  return (
   <>
    <div id="desktop">
     <Links />
 
-    <Header
-     windows={windows}
-     setWindows={setWindows}
-     muted={muted}
-     setMuted={setMuted}
-     setTabs={setTabs}
-     bringToFront={bringToFront}
-     setBringToFront={setBringToFront}
-    />
+    <Header {...props} />
 
     {!windows.welcome.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="welcome"
       topValues={[5, 50]}
       leftValues={[15, 60]}
       body={
-       <Welcome
-        windows={windows}
-        setWindows={setWindows}
-        setTabs={setTabs}
-        tabs={tabs}
-       />}
+       <Welcome {...props} />}
      />}
 
     {!windows.profile.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="profile"
       topValues={[5, 15]}
       leftValues={[15, 50]}
-      setTabs={setTabs}
-      tabs={tabs}
       body={
-       <Profile
-        windows={windows}
-        setWindows={setWindows}
-        tabs={tabs}
-        setBringToFront={setBringToFront}
-       />}
+       <Profile {...props} />}
      />}
 
     {!windows.dreamjournal.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="dreamjournal"
       topValues={[3, 6]}
       leftValues={[6, 30]}
@@ -132,10 +114,7 @@ const Desktop = ({ isMobile }) => {
 
     {!windows.glasshouse.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="glasshouse"
       topValues={[3, 6]}
       leftValues={[6, 30]}
@@ -144,10 +123,7 @@ const Desktop = ({ isMobile }) => {
 
     {!windows.apocalypto.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="apocalypto"
       topValues={[3, 6]}
       leftValues={[6, 30]}
@@ -156,10 +132,7 @@ const Desktop = ({ isMobile }) => {
 
     {!windows.contact.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="contact"
       topValues={[10, 30]}
       leftValues={[10, 60]}
@@ -168,10 +141,7 @@ const Desktop = ({ isMobile }) => {
 
     {!windows.resume.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="resume"
       topValues={[3, 6]}
       leftValues={[6, 30]}
@@ -180,23 +150,17 @@ const Desktop = ({ isMobile }) => {
 
     {!windows.music.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="music"
       topValues={[10, 30]}
       leftValues={[20, 60]}
-      body={<Music muted={muted} />}
+      body={<Music {...props} />}
      />
     }
 
     {!windows.minesweeper.close &&
      <Window
-      windows={windows}
-      setWindows={setWindows}
-      bringToFront={bringToFront}
-      setBringToFront={setBringToFront}
+      {...props}
       name="minesweeper"
       topValues={[10, 30]}
       leftValues={[20, 60]}
