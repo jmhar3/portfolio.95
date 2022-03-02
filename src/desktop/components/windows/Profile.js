@@ -7,6 +7,7 @@ import Projects from '../tabs/Projects';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
 import WindowButtons from './WindowButtons';
+import Tabs from '../tabs/Tabs';
 
 const Profile = ({
  windows,
@@ -40,68 +41,7 @@ const Profile = ({
       setWindows={setWindows} 
      />
     </span>
-     <ul className="row tabs clickable">
-      <li
-       className={`tab ${tabs.about && "selected-tab"}`}
-       onClick={() => setTabs({
-        about: true,
-        skills: false,
-        education: false,
-        work: false,
-        projects: false
-       })}
-      >
-       About
-      </li>
-      <li
-       className={`tab ${tabs.skills && "selected-tab"}`}
-       onClick={() => setTabs({
-        about: false,
-        skills: true,
-        education: false,
-        work: false,
-        projects: false
-       })}
-      >
-       Skills
-      </li>
-      <li
-       className={`tab ${tabs.education && "selected-tab"}`}
-       onClick={() => setTabs({
-        about: false,
-        skills: false,
-        education: true,
-        work: false,
-        projects: false
-       })}
-      >
-       Education
-      </li>
-      <li
-       className={`tab ${tabs.work && "selected-tab"}`}
-       onClick={() => setTabs({
-        about: false,
-        skills: false,
-        education: false,
-        work: true,
-        projects: false
-       })}
-      >
-       Work
-      </li>
-      <li
-       className={`tab ${tabs.projects && "selected-tab"}`}
-       onClick={() => setTabs({
-        about: false,
-        skills: false,
-        education: false,
-        work: false,
-        projects: true
-       })}
-      >
-       Projects
-      </li>
-     </ul>
+    <Tabs tabs={tabs} setTabs={setTabs} />
     <span className="window-body">
      {tabs.about && <About/>}
      {tabs.skills && <Skills/>}
