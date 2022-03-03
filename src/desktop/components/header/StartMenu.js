@@ -1,4 +1,3 @@
-import computer from '../../../images/computer.png';
 import StartTab from './StartTab';
 
 const StartMenu = (props) => {

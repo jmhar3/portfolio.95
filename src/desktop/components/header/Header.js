@@ -58,6 +58,7 @@ const Header = ({
     <ProgramsMenu
      windows={windows}
      setWindows={setWindows}
+     setTabs={setTabs}
      setStartMenu={setStartMenu}
      programsMenu={programsMenu}
      setProgramsMenu={setProgramsMenu}

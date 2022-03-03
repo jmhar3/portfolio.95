@@ -1,51 +1,27 @@
-const ProgramsMenu = ({
- programsMenu,
- setProgramsMenu,
- setStartMenu,
- setBringToFront,
- setWindows,
- windows,
- setAboutMenu
-}) => {
+import DropdownTab from './DropdownTab';
+
+const ProgramsMenu = (props) => {
+ const {
+  programsMenu,
+  setProgramsMenu
+ } = props;
+
  return (
   <ul
    className={`${!programsMenu && "remove"} border clickable`}
    onMouseLeave={() => setProgramsMenu(false)}
   >
-   {/* <li
-   onClick={() => {
-    setStartMenu(false)
-    setProgramsMenu(false)
-    setBringToFront("music")
-    setWindows({
-     ...windows,
-     music: {
-      minimise: false,
-      close: false
-     }
-    })
-   }}
-  >
-   Music Player
-  </li> */}
-
-   <li
-    className="row center clickable"
-    onMouseEnter={() => setAboutMenu(false)}
-    onClick={() => {
-     setStartMenu(false)
-     setBringToFront("minesweeper")
-     setWindows({
-      ...windows,
-      minesweeper: {
-       minimise: false,
-       close: false
-      }
-     })
-    }}
-   >
-    MineSweeper
-   </li>
+   <DropdownTab
+   {...props}
+   name="music"
+   label="Music Player"
+   />
+   
+   <DropdownTab
+   {...props}
+   name="minesweeper"
+   label="MineSweeper"
+   />
   </ul>
  )
 }
