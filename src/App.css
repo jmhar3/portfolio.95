@@ -41,11 +41,8 @@ ul {
 }
 
 .hidden {
- visibility: hidden;
-}
-
-.remove {
  display: none;
+ pointer-events: none;
 }
 
 .row {

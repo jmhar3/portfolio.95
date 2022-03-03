@@ -8,7 +8,7 @@ const AboutMenu = (props) => {
 
  return (
   <ul
-   className={`${!aboutMenu && "remove"} border clickable`}
+   className={`${!aboutMenu && "hidden"} border clickable`}
    onMouseLeave={() => setAboutMenu(false)}
   >
    <DropdownTab
