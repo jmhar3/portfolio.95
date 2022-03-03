@@ -303,7 +303,7 @@ tr td:nth-of-type(2), tr th:nth-of-type(2) {
 }
 
 .bring-to-front {
- z-index: 999;
+ z-index: 998;
 }
 
 .intro {
