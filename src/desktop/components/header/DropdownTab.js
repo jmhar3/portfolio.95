@@ -5,8 +5,8 @@ const DropdownTab = ({
  setBringToFront,
  setWindows,
  windows,
- setTabs,
- tabs,
+ setSelectedTab,
+ selectedTab,
  name,
  label
 }) => {
@@ -27,10 +27,7 @@ const DropdownTab = ({
 
     if (name === "profile") {
      setAboutMenu(false)
-     setTabs({
-      ...Object.keys(tabs).forEach(v => tabs[v] = false),
-      [label]: true
-     })
+     setSelectedTab([label])
     } else {
      setProgramsMenu(false)
     }

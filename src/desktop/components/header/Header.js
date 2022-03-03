@@ -4,18 +4,20 @@ import StartMenu from './StartMenu';
 import AboutMenu from './AboutMenu';
 import ProgramsMenu from './ProgramsMenu';
 
-const Header = ({
- windows,
- setWindows,
- muted,
- setMuted,
- setTabs,
- bringToFront,
- setBringToFront
-}) => {
+const Header = (props) => {
  const [startMenu, setStartMenu] = useState(false);
  const [aboutMenu, setAboutMenu] = useState(false);
  const [programsMenu, setProgramsMenu] = useState(false);
+
+ const menuProps = {
+  ...props,
+  startMenu,
+  setStartMenu,
+  aboutMenu,
+  setAboutMenu,
+  programsMenu,
+  setProgramsMenu
+ };
 
  // const handleCloseMenus = () => {
  //  if (!!startMenu) {
@@ -35,48 +37,14 @@ const Header = ({
  return (
   <div className="nav">
    <span className="row dropdowns">
-    <StartMenu
-     windows={windows}
-     setWindows={setWindows}
-     startMenu={startMenu}
-     setStartMenu={setStartMenu}
-     setProgramsMenu={setProgramsMenu}
-     setAboutMenu={setAboutMenu}
-     setBringToFront={setBringToFront}
-    />
+    <StartMenu {...menuProps} />
 
-    <AboutMenu
-     windows={windows}
-     setWindows={setWindows}
-     setStartMenu={setStartMenu}
-     setTabs={setTabs}
-     aboutMenu={aboutMenu}
-     setAboutMenu={setAboutMenu}
-     setBringToFront={setBringToFront}
-    />
+    <AboutMenu {...menuProps} />
 
-    <ProgramsMenu
-     windows={windows}
-     setWindows={setWindows}
-     setTabs={setTabs}
-     setStartMenu={setStartMenu}
-     programsMenu={programsMenu}
-     setProgramsMenu={setProgramsMenu}
-     setAboutMenu={setAboutMenu}
-     setBringToFront={setBringToFront}
-    />
+    <ProgramsMenu {...menuProps} />
    </span>
 
-   <NavBar
-    windows={windows}
-    setWindows={setWindows}
-    startMenu={startMenu}
-    setStartMenu={setStartMenu}
-    setProgramsMenu={setProgramsMenu}
-    setAboutMenu={setAboutMenu}
-    bringToFront={bringToFront}
-    setBringToFront={setBringToFront}
-   />
+   <NavBar {...menuProps} />
   </div>
  )
 }

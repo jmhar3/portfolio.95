@@ -1,12 +1,9 @@
-const Tabs = ({ tabs, setTabs }) => {
+const Tabs = ({ selectedTab, setSelectedTab }) => {
  const tab = (name) => {
   return (
    <li
-    className={`tab ${tabs[name] && "selected-tab"}`}
-    onClick={() => setTabs({
-     ...Object.keys(tabs).forEach(v => tabs[v] = false),
-     [name]: true
-    })}
+    className={`tab ${selectedTab === name && "selected-tab"}`}
+    onClick={() => setSelectedTab(name)}
     style={{textTransform: 'capitalize'}}
    >
     {name}

@@ -5,8 +5,8 @@ import { randomNumber } from '../../../helpers/Helpers';
 import Tabs from './tabs/Tabs';
 
 const Window = ({
- tabs,
- setTabs,
+ selectedTab,
+ setSelectedTab,
  windows,
  setWindows,
  bringToFront,
@@ -50,7 +50,10 @@ const Window = ({
      />
     </span>
     {name === "profile" && 
-    <Tabs tabs={tabs} setTabs={setTabs} />}
+    <Tabs
+     selectedTab={selectedTab}
+     setSelectedTab={setSelectedTab}
+    />}
     <span
      className="window-body"
     >

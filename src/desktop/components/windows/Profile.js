@@ -7,16 +7,16 @@ import Projects from './tabs/Projects';
 const Profile = ({
  windows,
  setWindows,
- tabs,
+ selectedTab,
  setBringToFront
 }) => {
  return (
   <>
-   {tabs.about && <About />}
-   {tabs.skills && <Skills />}
-   {tabs.education && <Education />}
-   {tabs.work && <Work />}
-   {tabs.projects &&
+   {selectedTab == "about" && <About />}
+   {selectedTab == "skills" && <Skills />}
+   {selectedTab == "education" && <Education />}
+   {selectedTab == "work" && <Work />}
+   {selectedTab == "projects" &&
     <Projects
      windows={windows}
      setWindows={setWindows}

@@ -59,13 +59,7 @@ const Desktop = ({ isMobile }) => {
   }
  })
 
- const [tabs, setTabs] = useState({
-  about: true,
-  skills: false,
-  education: false,
-  work: false,
-  projects: false
- })
+ const [selectedTab, setSelectedTab] = useState("about")
 
  const props = {
   windows: windows,
@@ -74,8 +68,8 @@ const Desktop = ({ isMobile }) => {
   setBringToFront: setBringToFront,
   muted: muted,
   setMuted: setMuted,
-  tabs: tabs,
-  setTabs: setTabs
+  selectedTab: selectedTab,
+  setSelectedTab: setSelectedTab
  }
 
  return (

@@ -4,8 +4,8 @@ import Window from './Window';
 const Welcome = ({
  windows,
  setWindows,
- setTabs,
- tabs
+ setSelectedTab,
+ selectedTab
 }) => {
  return (
   <>
@@ -33,10 +33,7 @@ const Welcome = ({
        close: false
       }
      })
-     setTabs({
-      ...Object.keys(tabs).forEach(v => tabs[v] = false),
-      about: true
-     })
+     setSelectedTab("about")
     }}>
     Learn More
    </button>
