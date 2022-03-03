@@ -22,10 +22,10 @@ const WindowButtons = ({
      }
     })}
    >-</button>
-   {maximisableWindow && <button
+   {/* {maximisableWindow && <button
    className="close-btn center"
    onClick={() => setMaximise(!maximise)}
-  >▭</button>}
+  >▭</button>} */}
    <button
     className="close-btn center"
     onClick={() => setWindows({

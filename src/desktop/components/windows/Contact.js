@@ -75,7 +75,12 @@ const Contact = () => {
         message: e.target.value
        })}
       />
-      <div className="right">
+      <div className="footer">
+       <button>
+        <a href="tel:+61499833390">
+         0499833390
+        </a>
+       </button>
        <button type="submit">Send</button>
       </div>
      </div>

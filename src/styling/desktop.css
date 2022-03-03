@@ -35,12 +35,6 @@ h1, h2, h3, h4, h5, p, li, div, button, span, a, input, textarea {
  box-shadow: 2px 2px #cb98d8 inset;
 }
 
-.right {
- width: 100%;
- display: flex;
- justify-content: flex-end;
-}
-
 button {
  border-left: 2px solid #fff;
  border-top: 2px solid #fff;
@@ -473,6 +467,19 @@ iframe, .browser img {
 
 #contact input:focus, #contact textarea:focus {
  outline: none;
+}
+
+#contact .footer {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+}
+
+#contact .footer a {
+ box-shadow: none;
+ margin: 0;
+ background: none;
+ padding: 0;
 }
 
 /* Music Player */
