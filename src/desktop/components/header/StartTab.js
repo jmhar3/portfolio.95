@@ -20,7 +20,6 @@ const StartTab = ({
    className={`row center ${clickable && "clickable"}`}
    onClick={() => {
     if (clickable) {
-     setStartMenu(false)
      setBringToFront(name)
      setWindows({
       ...windows,

@@ -2,6 +2,7 @@ import logo from '../../../images/heart.png';
 import email from '../../../images/email.png';
 import Clock from '../../../helpers/Clock';
 import NavTab from './NavTab';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 const NavBar = (props) => {
  const {
@@ -11,7 +12,6 @@ const NavBar = (props) => {
   setStartMenu,
   setProgramsMenu,
   setAboutMenu,
-  bringToFront,
   setBringToFront,
   muted,
   setMuted
@@ -21,18 +21,26 @@ const NavBar = (props) => {
   <nav className="row">
    <navbar>
     <span className="row start">
-     <button
-      className="border"
-      onClick={() => {
-       setStartMenu(!startMenu)
-       if (startMenu) {
-        setAboutMenu(false)
-        setProgramsMenu(false)
-       }
-      }}>
-      <img src={logo} alt="JH" />
-      Start
-     </button>
+     <OutsideClickHandler
+      onOutsideClick={() => {
+       setStartMenu(false);
+       setAboutMenu(false);
+       setProgramsMenu(false);
+      }}
+     >
+      <button
+       className="border"
+       onClick={() => {
+        setStartMenu(!startMenu)
+        if (startMenu) {
+         setAboutMenu(false)
+         setProgramsMenu(false)
+        }
+       }}>
+       <img src={logo} alt="JH" />
+       Start
+      </button>
+     </OutsideClickHandler>
      <hr />
     </span>
     <hr className="border" />
@@ -40,7 +48,6 @@ const NavBar = (props) => {
      className="clickable"
      src={email} alt="E-Mail"
      onClick={() => {
-      setStartMenu(false)
       setWindows({
        ...windows,
        contact: {
@@ -55,28 +62,28 @@ const NavBar = (props) => {
 
     <span className="window-buttons row">
      {!windows.welcome.close &&
-      <NavTab {...props} name="welcome"/>}
+      <NavTab {...props} name="welcome" />}
 
      {!windows.profile.close &&
-      <NavTab {...props} name="profile"/>}
+      <NavTab {...props} name="profile" />}
 
      {!windows.dreamjournal.close &&
-      <NavTab {...props} name="dreamjournal"/>}
+      <NavTab {...props} name="dreamjournal" />}
 
      {!windows.glasshouse.close &&
-      <NavTab {...props} name="glasshouse"/>}
+      <NavTab {...props} name="glasshouse" />}
 
      {!windows.apocalypto.close &&
-      <NavTab {...props} name="apocalypto"/>}
+      <NavTab {...props} name="apocalypto" />}
 
      {!windows.contact.close &&
-      <NavTab {...props} name="contact"/>}
+      <NavTab {...props} name="contact" />}
 
      {/* {!windows.music.close &&
       <NavTab {...props} name="music"/>} */}
 
      {!windows.minesweeper.close &&
-      <NavTab {...props} name="minesweeper"/>}
+      <NavTab {...props} name="minesweeper" />}
     </span>
    </navbar>
 
@@ -86,7 +93,7 @@ const NavBar = (props) => {
     onClick={() => setMuted(!muted)}
     className="clickable mute"
    /> */}
-    <Clock/>PM
+    <Clock />PM
    </span>
   </nav>
  )

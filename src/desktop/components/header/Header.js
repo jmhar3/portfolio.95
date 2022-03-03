@@ -18,22 +18,7 @@ const Header = (props) => {
   programsMenu,
   setProgramsMenu
  };
-
- // const handleCloseMenus = () => {
- //  if (!!startMenu) {
- //   setStartMenu(false);
- //   setAboutMenu(false);
- //   setProgramsMenu(false);
- //  }
- // } 
-
- // useEffect(() => {
- //  document.addEventListener('click', handleCloseMenus)
- //  return () => {
- //   document.removeEventListener('click', handleCloseMenus)
- //  }
- // }, []);
-
+ 
  return (
   <div className="nav">
    <span className="row dropdowns">

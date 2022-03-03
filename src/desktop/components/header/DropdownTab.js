@@ -1,12 +1,8 @@
 const DropdownTab = ({
- setStartMenu,
- setAboutMenu,
- setProgramsMenu,
  setBringToFront,
  setWindows,
  windows,
  setSelectedTab,
- selectedTab,
  name,
  label
 }) => {
@@ -14,7 +10,6 @@ const DropdownTab = ({
   <li
    style={{ textTransform: 'capitalize' }}
    onClick={() => {
-    setStartMenu(false)
     setBringToFront(name)
 
     setWindows({
@@ -25,12 +20,7 @@ const DropdownTab = ({
      }
     })
 
-    if (name === "profile") {
-     setAboutMenu(false)
-     setSelectedTab([label])
-    } else {
-     setProgramsMenu(false)
-    }
+    name === "profile" && setSelectedTab([label])
    }}
   >
    {label}
