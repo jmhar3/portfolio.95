@@ -2,7 +2,7 @@ import Draggable from 'react-draggable';
 import WindowButtons from './WindowButtons';
 import { useState, useEffect } from 'react';
 import { randomNumber } from '../../../helpers/Helpers';
-import Tabs from '../tabs/Tabs';
+import Tabs from './tabs/Tabs';
 
 const Window = ({
  tabs,

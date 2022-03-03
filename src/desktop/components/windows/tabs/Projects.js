@@ -1,6 +1,6 @@
-import notebook from '../../../images/notebook.png';
-import globe from '../../../images/globe.png';
-import computer from '../../../images/computer.png';
+import notebook from '../../../../images/notebook.png';
+import globe from '../../../../images/globe.png';
+import computer from '../../../../images/computer.png';
 // import { setTimeout } from 'react';
 
 const Projects = ({

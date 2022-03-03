@@ -1,8 +1,8 @@
-import About from '../tabs/About';
-import Skills from '../tabs/Skills';
-import Education from '../tabs/Education';
-import Work from '../tabs/Work';
-import Projects from '../tabs/Projects';
+import About from './tabs/About';
+import Skills from './tabs/Skills';
+import Education from './tabs/Education';
+import Work from './tabs/Work';
+import Projects from './tabs/Projects';
 
 const Profile = ({
  windows,
