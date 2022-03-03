@@ -81,11 +81,11 @@ const NavBar = (props) => {
    </navbar>
 
    <span className="rev-border clock center row">
-    <img
+    {/* <img
     src={logo}
     onClick={() => setMuted(!muted)}
     className="clickable mute"
-   />
+   /> */}
     <Clock/>PM
    </span>
   </nav>

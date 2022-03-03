@@ -12,33 +12,33 @@ const AboutMenu = (props) => {
    onMouseLeave={() => setAboutMenu(false)}
   >
    <DropdownTab
-   {...props}
-   name="profile"
-   label="about"
+    {...props}
+    name="profile"
+    label="about"
    />
 
    <DropdownTab
-   {...props}
-   name="profile"
-   label="skills"
+    {...props}
+    name="profile"
+    label="skills"
    />
-   
+
    <DropdownTab
-   {...props}
-   name="profile"
-   label="education"
+    {...props}
+    name="profile"
+    label="education"
    />
 
-<DropdownTab
-   {...props}
-   name="profile"
-   label="work"
+   <DropdownTab
+    {...props}
+    name="profile"
+    label="work"
    />
 
-<DropdownTab
-   {...props}
-   name="profile"
-   label="projects"
+   <DropdownTab
+    {...props}
+    name="profile"
+    label="projects"
    />
   </ul>
  )
