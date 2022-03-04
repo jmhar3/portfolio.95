@@ -1,4 +1,5 @@
 import Desktop from './desktop/Desktop';
+import ComingSoon from './mobile/ComingSoon';
 import Mobile from './mobile/Mobile';
 import Menu from './mobile/Menu';
 import About from './mobile/pages/About';
@@ -42,7 +43,8 @@ function App() {
   />
    {isMobile ?
    <Routes>
-    <Route path="/" element={<Mobile />} />
+    <Route path="/" element={<ComingSoon />} />
+    {/* <Route path="/" element={<Mobile />} />
     <Route path="home" element={<Menu />} />
     <Route path="about" element={<About />} />
     <Route path="skills" element={<Skills />} />
@@ -51,7 +53,7 @@ function App() {
     <Route path="music" element={<Music />} />
     <Route path="projects" element={<Projects />} />
     <Route path="healthAide" element={<HealthAide />} />
-    <Route path="lurey" element={<Lurey />} />
+    <Route path="lurey" element={<Lurey />} /> */}
    </Routes> :
    <Routes>
    <Route path="/" element={<Desktop />} />

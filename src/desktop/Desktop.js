@@ -15,7 +15,7 @@ import MineSweeper from './components/windows/MineSweeper';
 import Header from './components/header/Header.js';
 import { useState } from 'react';
 
-const Desktop = ({ isMobile }) => {
+const Desktop = () => {
  const [muted, setMuted] = useState(false);
 
  const [bringToFront, setBringToFront] = useState("welcome");
