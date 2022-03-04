@@ -11,7 +11,7 @@ const ComingSoon = () => {
      <a href="https://www.linkedin.com/in/jessica-harriman-a2a249217/" target="_blank"><img style={{width: '69px'}} src={linkedin} /></a>
     </div>
     <div class="container">
-     <a href="https://medium.com/@jmhar" target="_blank">
+     <a href="https://github.com/jmhar3" target="_blank">
       <img style={{width: '69px'}} src={github} />
      </a>
     </div>
